@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>HOME Inverter</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          font-family: Arial, sans-serif;
+          padding-top: 80px; /* space for fixed navbar */
+        }
+    
+        /* Navbar */
+        .navbar {
+          position: fixed;
+          top: 30px;
+          width: 100%;
+          background-color: black;
+          z-index: 1000;
+          padding: 10px 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+        .logo img {
+          height: 60px;
+        }
+    
+        .nav-menu {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          list-style: none;
+        }
+    
+        .nav-menu li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          padding: 8px;
+        }
+    
+        /* Dropdowns */
+        .dropdown-content,
+        .sub-dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #deca1a;
+          min-width: 200px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          z-index: 1;
+        }
+    
+        .dropdown-content.show,
+        .sub-dropdown-content.show {
+          display: block;
+        }
+    
+        .dropdown-content li,
+        .sub-dropdown-content li {
+          list-style: none;
+        }
+    
+        .dropdown-content a,
+        .sub-dropdown-content a {
+          color: #333;
+          padding: 10px 15px;
+          display: block;
+          text-decoration: none;
+          transition: background 0.3s;
+        }
+    
+        .dropdown-content a:hover,
+        .sub-dropdown-content a:hover {
+          background-color: hsl(61, 89%, 48%);
+        }
+    
+        .sub-dropdown {
+          position: relative;
+        }
+    
+        .sub-dropdown:hover .sub-dropdown-content {
+          display: block;
+          left: 100%;
+          top: 0;
+        }
+    
+        .sub-dropdown-content {
+          top: 0;
+          left: 100%;
+        }
+    
+        /* Hamburger */
+        .hamburger {
+          display: none;
+          font-size: 28px;
+          color: white;
+          cursor: pointer;
+        }
+    
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+          .hamburger {
+            display: block;
+          }
+    
+          .nav-menu {
+            display: none;
+            flex-direction: column;
+            background-color: black;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            width: 260px;
+            border-radius: 8px;
+            padding: 10px;
+          }
+    
+          .nav-menu.active {
+            display: flex;
+          }
+    
+          .nav-menu li {
+            margin: 10px 0;
+          }
+    
+          .dropdown-content,
+          .sub-dropdown-content {
+            position: relative;
+            left: 0;
+            background-color: #deca1a;
+          }
+    
+          .sub-dropdown:hover .sub-dropdown-content {
+            display: none;
+          }
+    
+          .sub-dropdown-content.show {
+            display: block !important;
+          }
+        }
+      </style>
+    </head>
+    <body>
+    
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="akino logo.png" alt="Company Logo" />
+          </a>
+        </div>
+    
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+    
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+    
+          <li class="dropdown">
+            <a href="#" onclick="toggleProductDropdown(event)">PRODUCTS ▾</a>
+            <ul id="productDropdown" class="dropdown-content">
+    
+              <!-- EV-Battery Submenu -->
+              <li class="sub-dropdown">
+                <a href="ev-batteries.html" onclick="toggleSubMenu(event, 'evSubmenu')">EV-Battery ▸</a>
+                <ul id="evSubmenu" class="sub-dropdown-content">
+                  <li><a href="ev-2w-scooty.html" target="_blank">2-Wheelers Batteries</a></li>
+                  <li><a href="ev-3w-rickshaw.html" target="_blank">3-Wheelers Batteries</a></li>
+                  <li><a href="ev-cycle.html" target="_blank">E-Cycles Batteries</a></li>
+                </ul>
+              </li>
+    
+              <!-- ESS-Battery Submenu -->
+              <li class="sub-dropdown">
+                <a href="ess-batteries.html" onclick="toggleSubMenu(event, 'essSubmenu')">ESS-Battery ▸</a>
+                <ul id="essSubmenu" class="sub-dropdown-content">
+                  <li><a href="ess-home.html" target="_blank">Telecom Li-ion Battery</a></li>
+                  <li><a href="ess-commercial.html" target="_blank">Home Inverter Li-ion Battery</a></li>
+                  <li><a href="ess-backup.html" target="_blank">High Voltage ESS Li-ion Battery</a></li>
+                  <li><a href="ess-industrial.html" target="_blank">Wall-Mounted Li-ion Battery</a></li>
+                  <li><a href="ess-hybrid.html" target="_blank">UPS (Data Center) Li-ion Battery</a></li>
+                </ul>
+              </li>
+    
+              <!-- Solar Battery -->
+              <li><a href="solar-batteries.html" target="_blank">Solar-Battery</a></li>
+            </ul>
+          </li>
+    
+          <li><a href="career.html">CAREERS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    
+      <!-- JavaScript -->
+      <script>
+        function toggleMobileMenu() {
+          document.getElementById("navMenu").classList.toggle("active");
+        }
+    
+        function toggleProductDropdown(event) {
+          event.preventDefault();
+          document.getElementById("productDropdown").classList.toggle("show");
+        }
+    
+        function toggleSubMenu(event, submenuId) {
+          event.preventDefault();
+          document.getElementById(submenuId).classList.toggle("show");
+        }
+    
+        // Close dropdown if clicking outside
+        window.onclick = function (e) {
+          if (!e.target.closest('.dropdown')) {
+            const dropdown = document.getElementById("productDropdown");
+            if (dropdown && dropdown.classList.contains('show')) {
+              dropdown.classList.remove('show');
+            }
+          }
+        }
+      </script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    h1 {
+      margin-top: 80px; /* Navbar height se thoda zyada margin do */
+      text-align: center;
+      font-size: 2em;
+    
+    
+    }
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background-color: white;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 15px;
+    }
+    .product-info h2 {
+      margin: 0 0 10px;
+      color: #014a70;
+    }
+    .product-info ul {
+      padding-left: 20px;
+    }
+    .back-btn {
+      display: block;
+      margin: 30px auto 0;
+      width: fit-content;
+      padding: 10px 20px;
+      background-color: #014a70;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+  </style>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 30px;
+      background: #f8fff9;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      text-align: center;
+      color: #157347;
+      margin-bottom: 40px;
+    }
+    .product-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+}
+
+    .product-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #157347;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h2 {
+      font-size: 20px;
+      color: #157347;
+      margin-bottom: 10px;
+    }
+
+    .product-info ul {
+      padding-left: 20px;
+      color: #333;
+    }
+
+    .back-btn {
+      display: block;
+      margin: 40px auto 0;
+      padding: 12px 25px;
+      background-color: #157347;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      width: max-content;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #0d4d2c;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .product-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🏠 Home Inverter Li-ion Battery</h1>
+  <p style="max-width: 900px; margin: 0 auto 30px auto; font-size: 18px; line-height: 1.6; color: #333; text-align: center;">
+    🔌 <strong>Home Inverter Li-ion Batteries</strong> are modern energy storage systems designed for household power backup. These batteries ensure uninterrupted power during outages and are optimized for safety, longevity, and compact performance.
+    <br /><br />
+    🔋 Featuring Lithium-ion technology, they are lightweight, fast-charging, and highly efficient compared to traditional batteries. Integrated with advanced BMS, they offer overcharge protection, temperature control, and longer lifecycle.
+    <br /><br />
+    ✅ A perfect solution for residential solar systems and inverters, these batteries reduce electricity bills and promote green energy at home.
+  </p>
+
+  <div class="product-container">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/12v100ah.jpg" alt="12.8V 100Ah Battery" />
+      </div>
+      <div class="product-info">
+        <h2>🔋 12.8V 100Ah</h2>
+        <ul>
+          <li>✅ Lightweight & compact</li>
+          <li>✅ 3000+ charge cycles</li>
+          <li>✅ Suitable for small inverters</li>
+          <li>✅ Fast-charging support</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/25v100ah.jpg" alt="25.6V 100Ah Battery" />
+      </div>
+      <div class="product-info">
+        <h2>🔋 25.6V 100Ah</h2>
+        <ul>
+          <li>✅ Greater storage for larger homes</li>
+          <li>✅ Maintenance-free design</li>
+          <li>✅ Eco-friendly & recyclable</li>
+          <li>✅ Long standby time</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/48v100ah-home.jpg" alt="48V 100Ah Battery" />
+      </div>
+      <div class="product-info">
+        <h2>🔋 48V 100Ah</h2>
+        <ul>
+          <li>✅ High power output</li>
+          <li>✅ Smart BMS integration</li>
+          <li>✅ Solar compatible</li>
+          <li>✅ Ideal for full-house backup</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a href="ess-batteries.html" class="back-btn">⬅ Back </a>
+  <footer style="background-color: #355764; color: #fff; padding: 40px 0; font-family: 'Segoe UI', sans-serif;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+  
+      <!-- About Company -->
+      <div style="flex: 1; min-width: 220px; margin: 20px;">
+        <h3 style="border-bottom: 2px solid #4caf50; padding-bottom: 5px;">About Company</h3>
+        <p>Akinotech provides India’s most advanced lithium battery packs engineered with the latest technology for Indian conditions.</p>
+        <!-- Social Icons -->
+       </div>
+  
+      <!-- Useful Links -->
+      <div style="flex: 1; min-width: 180px; margin: 20px;">
+        <h3 style="border-bottom: 2px solid #4caf50; padding-bottom: 5px;">Useful Links</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="index.html" style="color: #fff; text-decoration: none;">→ Home</a></li>
+          <li><a href="about.html" style="color: #fff; text-decoration: none;">→ About Us</a></li>
+          <li><a href="contact.html" style="color: #fff; text-decoration: none;">→ Contact Us</a></li>
+          <li><a href="career.html" style="color: #fff; text-decoration: none;">→ Careers</a></li>
+        </ul>
+      </div>
+  
+      <!-- Product Portfolio -->
+      <div style="flex: 1; min-width: 200px; margin: 20px;">
+        <h3 style="border-bottom: 2px solid #4caf50; padding-bottom: 5px;">Product Portfolio</h3>
+        <ul style="list-style: none; padding: 0;">
+         <li><a href="solar-batteries.html" style="color: #fff; text-decoration: none;">→ Solar Batteries</a></li>
+          <li><a href="ev-batteries.html" style="color: #fff; text-decoration: none;">→ EV Batteries</a></li>
+          <li><a href="ev-cycle.html" style="color: #fff; text-decoration: none;">→E-CYCLE Batteries </a></li>
+          <li><a href="ev-2w-scooty.html" style="color: #fff; text-decoration: none;">→ EV-2-wheelers Batteries</a></li>
+          <li><a href="ev-3w-rickshaw.html" style="color: #fff; text-decoration: none;">→ EV-3W-Wheelers Batteries</a></li>
+          <li><a href="ess-batteries.html" style="color: #fff; text-decoration: none;">→ ESS Batteries</a></li>
+          <li><a href="ess-hybrid.html" style="color: #fff; text-decoration: none;">→ UPS Batteries</a></li>
+          <li><a href="ess-home.html" style="color: #fff; text-decoration: none;">→ Telecom Batteries</a></li>
+          <li><a href="ess-industrial.html" style="color: #fff; text-decoration: none;">→ Wall-mounted Batteries</a></li>
+          <li><a href="ess-commercial.html" style="color: #fff; text-decoration: none;">→ Home Inverter Li-ion Battery</a></li>
+          <li><a href="ess-backup.html" style="color: #fff; text-decoration: none;">→ High Voltage ESS Li-ion Battery</a></li>
+   </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div style="flex: 1; min-width: 220px; margin: 20px;">
+        <h3 style="border-bottom: 2px solid #4caf50; padding-bottom: 5px;">Contact Us</h3>
+        <p><strong>Number:</strong><br>044-42027488</p>
+        <p><strong>Toll Free Number:</strong><br>18005697333</p>
+        <p><strong>Location:</strong><br> AKINO TECH PRIVATE LIMITED Factory: No.150,Mummalpattu(village), Chinnay Chatram, Attuputhur(po),kancheepuram-631561 </p>
+      </div>
+  
+    </div>
+  </footer>
+  <!-- Footer End -->
+  
+       <div class="footer_section layout_padding">
+          <div class="container-fluid">
+             <div class="row">
+                <div class="col-lg-8 col-sm-12 padding_0">
+                   <div class="map_main">
+                      <div class="map-responsive">
+                         <div class="contact_section layout_padding">
+                            <div class="container">
+                               <div class="contact_main">
+                                  <h1 class="request_text">A Call Back</h1>
+                                  <form action="/action_page.php">
+                                     <div class="form-group">
+                                        <input type="text" class="email-bt" placeholder="Name" name="Name">
+                                     </div>
+                                     <div class="form-group">
+                                        <input type="text" class="email-bt" placeholder="Email" name="Name">
+                                     </div>
+                                     <div class="form-group">
+                                        <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
+                                     </div>
+                                     <div class="form-group">
+                                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                                     </div>
+                                  </form>
+                                  <div class="send_btn"><a href="https://wa.me/918939433755">SEND</a></div>
+                               </div>
+                            </div>
+                         </div>
+                       <!---- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d455398.1590385314!2d79.91531488685787!3d13.18469667757593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1744089622662!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                  <div class="call_text"><a href="https://maps.app.goo.gl/bvcvJc9uhjsrHJtw6"><img src="images/map-icon.png"><span class="padding_left_0">Page when looking at its layou</span></a></div>
+                   <div class="call_text"><a href="#"><img src="images/call-icon.png"><span class="padding_left_0">Call Now  +91-8939433755</span></a></div>
+                   <div class="call_text"><a href=""><img src="images/mail-icon.png"><span class="padding_left_0">SALES@AKINOTECH.COM</span></a></div>
+                   <div class="social_icon">
+                      
+                       <div style="margin-top: 20px;">
+                         <a href="https://www.linkedin.com/company/akinotech/" target="_blank" style="margin-right: 10px;">
+                           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="25">
+                         </a>
+                        <a href="https://www.facebook.com/share/1C72sVSULD/" target="_blank" style="margin-right: 10px;">
+                         <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" width="25">
+                       </a>
+                       <a href="https://www.instagram.com/akino_tech?utm_source=qr&igsh=c2NmdzN2dmo4aXNw" target="_blank" style="margin-right: 10px;">
+                         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="25">
+                       </a>
+                         <a href="https://www.youtube.com/channel/UCDCdQaaAS4aNY0g_WwR4luw" target="_blank">
+                         <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="25">
+                       </a>
+                       </div>
+                   </div>
+                   <input type="text" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
+                   
+                </div>
+             </div>
+          </div>
+       </div>
+       <!-- footer section end -->
+       <!-- copyright section start -->
+       <div class="copyright_section">
+          <div class="container">
+             <p class="copyright_text">Copyright 2019 All Right Reserved By.<a href="https://html.design"> Free  html Templates</p>
+          </div>
+       </div>
+       <!-- copyright section end -->    
+       <!-- Javascript files-->
+       <script src="js/jquery.min.js"></script>
+       <script src="js/popper.min.js"></script>
+       <script src="js/bootstrap.bundle.min.js"></script>
+       <script src="js/jquery-3.0.0.min.js"></script>
+       <script src="js/plugin.js"></script>
+       <!-- sidebar -->
+       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+       <script src="js/custom.js"></script>
+       <!-- javascript --> 
+       <script src="js/owl.carousel.js"></script>
+       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+       <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+           
+          }
+  
+          $("#main").click(function(){
+              $("#navbarSupportedContent").toggleClass("nav-normal")
+          })
+       </script> <a href="https://wa.me/918939433755" class="whatsapp_float" target="_blank">
+         <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp">
+      </a>
+      
+    
+       
+  
+  
+</body>
+</html>
