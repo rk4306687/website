@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta name="google-site-verification" content="XmnIf3TdbCmhjEFjAUIDaH8hUlT-kAiivUlIi5_lrJE" />
-      <head>
+     <meta name="google-site-verification" content="XmnIf3TdbCmhjEFjAUIDaH8hUlT-kAiivUlIi5_lrJE" />
+     <head>
   <title>Akino Tech | EV Battery Solutions</title>
   <meta name="description" content="Akino Tech - India's trusted EV lithium battery manufacturer for UPS, Solar, and E-Mobility solutions.">
   <meta name="keywords" content="Akino Tech, EV Battery, Lithium Battery, Solar Battery, UPS, Electric Vehicle Battery, Chennai, Kanchipuram">
   <meta name="author" content="Akino Tech">
 </head>
+
 
       <!-- basic -->
       <meta charset="utf-8">
@@ -41,232 +42,247 @@
    </head>
    <body>
       <!-- header section start -->
-      <style>
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-    
-        body {
-          font-family: Arial, sans-serif;
-          padding-top: 80px; /* space for fixed navbar */
-        }
-    
-        /* Navbar */
-        .navbar {
-          position: fixed;
-          top: 20px;
-          width: 100%;
-          background-color: black;
-          z-index: 1000;
-          padding: 10px 20px;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-          border-radius: 10px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-    
-        .logo img {
-          height: 60px;
-        }
-    
-        .nav-menu {
-          display: flex;
-          align-items: center;
-          gap: 20px;
-          list-style: none;
-        }
-    
-        .nav-menu li a {
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
-          padding: 8px;
-        }
-    
-        /* Dropdowns */
-        .dropdown-content,
-        .sub-dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #deca1a;
-          min-width: 200px;
-          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-          z-index: 1;
-        }
-    
-        .dropdown-content.show,
-        .sub-dropdown-content.show {
-          display: block;
-        }
-    
-        .dropdown-content li,
-        .sub-dropdown-content li {
-          list-style: none;
-        }
-    
-        .dropdown-content a,
-        .sub-dropdown-content a {
-          color: #333;
-          padding: 10px 15px;
-          display: block;
-          text-decoration: none;
-          transition: background 0.3s;
-        }
-    
-        .dropdown-content a:hover,
-        .sub-dropdown-content a:hover {
-          background-color: hsl(61, 89%, 48%);
-        }
-    
-        .sub-dropdown {
-          position: relative;
-        }
-    
-        .sub-dropdown:hover .sub-dropdown-content {
-          display: block;
-          left: 100%;
-          top: 0;
-        }
-    
-        .sub-dropdown-content {
-          top: 0;
-          left: 100%;
-        }
-    
-        /* Hamburger */
-        .hamburger {
-          display: none;
-          font-size: 28px;
-          color: white;
-          cursor: pointer;
-        }
-    
-        /* Mobile Responsive */
-        @media (max-width: 992px) {
-          .hamburger {
-            display: block;
-          }
-    
-          .nav-menu {
-            display: none;
-            flex-direction: column;
-            background-color: black;
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            width: 260px;
-            border-radius: 8px;
-            padding: 10px;
-          }
-    
-          .nav-menu.active {
-            display: flex;
-          }
-    
-          .nav-menu li {
-            margin: 10px 0;
-          }
-    
-          .dropdown-content,
-          .sub-dropdown-content {
-            position: relative;
-            left: 0;
-            background-color: #deca1a;
-          }
-    
-          .sub-dropdown:hover .sub-dropdown-content {
-            display: none;
-          }
-    
-          .sub-dropdown-content.show {
-            display: block !important;
-          }
-        }
-      </style>
-    </head>
-    <body>
-    
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="logo">
-          <a href="index.html">
-            <img src="akino logo.png" alt="Company Logo" />
-          </a>
-        </div>
-    
-        <!-- Hamburger Icon -->
-        <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
-    
-        <!-- Navigation Menu -->
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="about.html">ABOUT US</a></li>
-    
-          <li class="dropdown">
-            <a href="#" onclick="toggleProductDropdown(event)">PRODUCTS ▾</a>
-            <ul id="productDropdown" class="dropdown-content">
-    
-              <!-- EV-Battery Submenu -->
-              <li class="sub-dropdown">
-                <a href="ev-batteries.html" onclick="toggleSubMenu(event, 'evSubmenu')">EV-Battery ▸</a>
-                <ul id="evSubmenu" class="sub-dropdown-content">
-                  <li><a href="ev-2w-scooty.html" target="_blank">2-Wheelers Batteries</a></li>
-                  <li><a href="ev-3w-rickshaw.html" target="_blank">3-Wheelers Batteries</a></li>
-                  <li><a href="ev-cycle.html" target="_blank">E-Cycles Batteries</a></li>
-                </ul>
-              </li>
-    
-              <!-- ESS-Battery Submenu -->
-              <li class="sub-dropdown">
-                <a href="ess-batteries.html" onclick="toggleSubMenu(event, 'essSubmenu')">ESS-Battery ▸</a>
-                <ul id="essSubmenu" class="sub-dropdown-content">
-                  <li><a href="ess-home.html" target="_blank">Telecom Li-ion Battery</a></li>
-                  <li><a href="ess-commercial.html" target="_blank">Home Inverter Li-ion Battery</a></li>
-                  <li><a href="ess-backup.html" target="_blank">High Voltage ESS Li-ion Battery</a></li>
-                  <li><a href="ess-industrial.html" target="_blank">Wall-Mounted Li-ion Battery</a></li>
-                  <li><a href="ess-hybrid.html" target="_blank">UPS (Data Center) Li-ion Battery</a></li>
-                </ul>
-              </li>
-    
-              <!-- Solar Battery -->
-              <li><a href="solar-batteries.html" target="_blank">Solar-Battery</a></li>
-            </ul>
-          </li>
-    
-          <li><a href="career.html">CAREERS</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-      </nav>
-    
-      <!-- JavaScript -->
-      <script>
-        function toggleMobileMenu() {
-          document.getElementById("navMenu").classList.toggle("active");
-        }
-    
-        function toggleProductDropdown(event) {
-          event.preventDefault();
-          document.getElementById("productDropdown").classList.toggle("show");
-        }
-    
-        function toggleSubMenu(event, submenuId) {
-          event.preventDefault();
-          document.getElementById(submenuId).classList.toggle("show");
-        }
-    
-        // Close dropdown if clicking outside
-        window.onclick = function (e) {
-          if (!e.target.closest('.dropdown')) {
-            const dropdown = document.getElementById("productDropdown");
-            if (dropdown && dropdown.classList.contains('show')) {
-              dropdown.classList.remove('show');
-            }
-          }
-        }
-      </script>
+     <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    padding-top: 60px; /* Navbar ke liye thoda kam space */
+  }
+
+  .navbar {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
+    padding: 6px 15px; /* kam padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo img {
+    height: 45px; /* kam height */
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* thoda kam gap */
+    list-style: none;
+  }
+
+  .nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 8px; /* kam padding */
+    user-select: none;
+    font-size: 14px;
+  }
+
+  /* Dropdown base styles */
+  .dropdown-content,
+  .sub-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #deca1a;
+    min-width: 180px; /* thoda kam width */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1001;
+  }
+
+  .dropdown-content li,
+  .sub-dropdown-content li {
+    list-style: none;
+  }
+
+  .dropdown-content a,
+  .sub-dropdown-content a {
+    color: #333;
+    padding: 8px 12px; /* thoda kam padding */
+    display: block;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-size: 13px;
+  }
+
+  .dropdown-content a:hover,
+  .sub-dropdown-content a:hover {
+    background-color: hsl(61, 89%, 48%);
+  }
+
+  /* Desktop hover dropdown */
+  .dropdown:hover > .dropdown-content {
+    display: block;
+  }
+  .sub-dropdown:hover > .sub-dropdown-content {
+    display: block;
+    left: 100%;
+    top: 0;
+  }
+
+  /* Sub-dropdown positioning */
+  .sub-dropdown {
+    position: relative;
+  }
+  .sub-dropdown-content {
+    top: 0;
+    left: 100%;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 992px) {
+    body {
+      padding-top: 50px;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background-color: black;
+      width: 100%;
+      padding: 8px 0;
+      margin-top: 5px;
+      border-radius: 8px;
+    }
+
+    .nav-menu.active {
+      display: flex;
+    }
+
+    .nav-menu li {
+      width: 100%;
+      position: relative;
+    }
+
+    .nav-menu li a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    /* Mobile dropdowns show/hide */
+    .dropdown-content,
+    .sub-dropdown-content {
+      position: static;
+      box-shadow: none;
+      background-color: #deca1a;
+      display: none;
+      padding-left: 20px;
+      min-width: 100%;
+    }
+
+    .dropdown-content.show,
+    .sub-dropdown-content.show {
+      display: block !important;
+    }
+
+    /* Disable hover effect on mobile */
+    .dropdown:hover > .dropdown-content,
+    .sub-dropdown:hover > .sub-dropdown-content {
+      display: none;
+    }
+  }
+</style>
+
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="akino logo.png" alt="Company Logo" />
+    </a>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="about.html">ABOUT US</a></li>
+
+    <li class="dropdown">
+      <a href="#" onclick="toggleProductDropdown(event)">PRODUCTS ▾</a>
+      <ul id="productDropdown" class="dropdown-content">
+        <li class="sub-dropdown">
+          <a href="ev-batteries.html" onclick="toggleSubMenu(event, 'evSubmenu')">EV-Battery ▸</a>
+          <ul id="evSubmenu" class="sub-dropdown-content">
+            <li><a href="ev-2w-scooty.html" target="_blank">2-Wheelers Batteries</a></li>
+            <li><a href="ev-3w-rickshaw.html" target="_blank">3-Wheelers Batteries</a></li>
+            <li><a href="ev-cycle.html" target="_blank">E-Cycles Batteries</a></li>
+          </ul>
+        </li>
+
+        <li class="sub-dropdown">
+          <a href="ess-batteries.html" onclick="toggleSubMenu(event, 'essSubmenu')">ESS-Battery ▸</a>
+          <ul id="essSubmenu" class="sub-dropdown-content">
+            <li><a href="ess-home.html" target="_blank">Telecom Li-ion Battery</a></li>
+            <li><a href="ess-commercial.html" target="_blank">Home Inverter Li-ion Battery</a></li>
+            <li><a href="ess-backup.html" target="_blank">High Voltage ESS Li-ion Battery</a></li>
+            <li><a href="ess-industrial.html" target="_blank">Wall-Mounted Li-ion Battery</a></li>
+            <li><a href="ess-hybrid.html" target="_blank">UPS (Data Center) Li-ion Battery</a></li>
+          </ul>
+        </li>
+
+        <li><a href="solar-batteries.html" target="_blank">Solar-Battery</a></li>
+      </ul>
+    </li>
+
+    <li><a href="career.html">CAREERS</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMobileMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+  }
+
+  function toggleProductDropdown(event) {
+    event.preventDefault();
+    const dropdown = document.getElementById("productDropdown");
+    dropdown.classList.toggle("show");
+  }
+
+  function toggleSubMenu(event, submenuId) {
+    event.preventDefault();
+    const submenu = document.getElementById(submenuId);
+    submenu.classList.toggle("show");
+  }
+
+  // Close dropdown if clicking outside on desktop
+  window.onclick = function (e) {
+    if (!e.target.closest('.dropdown')) {
+      const dropdown = document.getElementById("productDropdown");
+      if (dropdown && dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+      }
+      // Close all submenus
+      const submenus = document.querySelectorAll('.sub-dropdown-content.show');
+      submenus.forEach(sm => sm.classList.remove('show'));
+    }
+  };
+</script>
+
     
          
          <!-- banner section start -->
