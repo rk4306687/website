@@ -1,75 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>3-wheeler</title>
-
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/fevicon.png" type="image/gif" />
-
-  <!-- Internal CSS -->
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>3-wheeler</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          font-family: Arial, sans-serif;
+          padding-top: 80px; /* space for fixed navbar */
+        }
+    
+        /* Navbar */
+        .navbar {
+          position: fixed;
+          top: 30px;
+          width: 100%;
+          background-color: black;
+          z-index: 1000;
+          padding: 10px 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+        .logo img {
+          height: 60px;
+        }
+    
+        .nav-menu {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          list-style: none;
+        }
+    
+        .nav-menu li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          padding: 8px;
+        }
+    
+        /* Dropdowns */
+        .dropdown-content,
+        .sub-dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #deca1a;
+          min-width: 200px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          z-index: 1;
+        }
+    
+        .dropdown-content.show,
+        .sub-dropdown-content.show {
+          display: block;
+        }
+    
+        .dropdown-content li,
+        .sub-dropdown-content li {
+          list-style: none;
+        }
+    
+        .dropdown-content a,
+        .sub-dropdown-content a {
+          color: #333;
+          padding: 10px 15px;
+          display: block;
+          text-decoration: none;
+          transition: background 0.3s;
+        }
+    
+        .dropdown-content a:hover,
+        .sub-dropdown-content a:hover {
+          background-color: hsl(61, 89%, 48%);
+        }
+    
+        .sub-dropdown {
+          position: relative;
+        }
+    
+        .sub-dropdown:hover .sub-dropdown-content {
+          display: block;
+          left: 100%;
+          top: 0;
+        }
+    
+        .sub-dropdown-content {
+          top: 0;
+          left: 100%;
+        }
+    
+        /* Hamburger */
+        .hamburger {
+          display: none;
+          font-size: 28px;
+          color: white;
+          cursor: pointer;
+        }
+    
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+          .hamburger {
+            display: block;
+          }
+    
+          .nav-menu {
+            display: none;
+            flex-direction: column;
+            background-color: black;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            width: 260px;
+            border-radius: 8px;
+            padding: 10px;
+          }
+    
+          .nav-menu.active {
+            display: flex;
+          }
+    
+          .nav-menu li {
+            margin: 10px 0;
+          }
+    
+          .dropdown-content,
+          .sub-dropdown-content {
+            position: relative;
+            left: 0;
+            background-color: #deca1a;
+          }
+    
+          .sub-dropdown:hover .sub-dropdown-content {
+            display: none;
+          }
+    
+          .sub-dropdown-content.show {
+            display: block !important;
+          }
+        }
+      </style>
+    </head>
+    <body>
+    
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="akino logo.png" alt="Company Logo" />
+          </a>
+        </div>
+    
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+    
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+    
+          <li class="dropdown">
+            <a href="#" onclick="toggleProductDropdown(event)">PRODUCTS ▾</a>
+            <ul id="productDropdown" class="dropdown-content">
+    
+              <!-- EV-Battery Submenu -->
+              <li class="sub-dropdown">
+                <a href="ev-batteries.html" onclick="toggleSubMenu(event, 'evSubmenu')">EV-Battery ▸</a>
+                <ul id="evSubmenu" class="sub-dropdown-content">
+                  <li><a href="ev-2w-scooty.html" target="_blank">2-Wheelers Batteries</a></li>
+                  <li><a href="ev-3w-rickshaw.html" target="_blank">3-Wheelers Batteries</a></li>
+                  <li><a href="ev-cycle.html" target="_blank">E-Cycles Batteries</a></li>
+                </ul>
+              </li>
+    
+              <!-- ESS-Battery Submenu -->
+              <li class="sub-dropdown">
+                <a href="ess-batteries.html" onclick="toggleSubMenu(event, 'essSubmenu')">ESS-Battery ▸</a>
+                <ul id="essSubmenu" class="sub-dropdown-content">
+                  <li><a href="ess-home.html" target="_blank">Telecom Li-ion Battery</a></li>
+                  <li><a href="ess-commercial.html" target="_blank">Home Inverter Li-ion Battery</a></li>
+                  <li><a href="ess-backup.html" target="_blank">High Voltage ESS Li-ion Battery</a></li>
+                  <li><a href="ess-industrial.html" target="_blank">Wall-Mounted Li-ion Battery</a></li>
+                  <li><a href="ess-hybrid.html" target="_blank">UPS (Data Center) Li-ion Battery</a></li>
+                </ul>
+              </li>
+    
+              <!-- Solar Battery -->
+              <li><a href="solar-batteries.html" target="_blank">Solar-Battery</a></li>
+            </ul>
+          </li>
+    
+          <li><a href="career.html">CAREERS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    
+      <!-- JavaScript -->
+      <script>
+        function toggleMobileMenu() {
+          document.getElementById("navMenu").classList.toggle("active");
+        }
+    
+        function toggleProductDropdown(event) {
+          event.preventDefault();
+          document.getElementById("productDropdown").classList.toggle("show");
+        }
+    
+        function toggleSubMenu(event, submenuId) {
+          event.preventDefault();
+          document.getElementById(submenuId).classList.toggle("show");
+        }
+    
+        // Close dropdown if clicking outside
+        window.onclick = function (e) {
+          if (!e.target.closest('.dropdown')) {
+            const dropdown = document.getElementById("productDropdown");
+            if (dropdown && dropdown.classList.contains('show')) {
+              dropdown.classList.remove('show');
+            }
+          }
+        }
+      </script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
-      padding-top: 100px; /* Navbar ke liye space */
+      padding: 20px;
     }
-
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: black;
-      z-index: 1000;
-      padding: 10px 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      border-radius: 0 0 10px 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 60px;
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      list-style: none;
-    }
-
-    .nav-menu li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
     h1 {
+      margin-top: 80px; /* Navbar height se thoda zyada margin do */
       text-align: center;
       font-size: 2em;
-      margin-top: 20px;
+    
+    
     }
-
     .product-card {
       border: 1px solid #ddd;
       border-radius: 12px;
@@ -79,34 +281,28 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       overflow: hidden;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0px;
-      justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 0px;
+  justify-content: center;
     }
-
     .product-card img {
-      width: 50%;
-      height: 150px;
+      width: 100%;
+      height: 5 0px;
       object-fit: cover;
     }
-
     .product-info {
       padding: 15px;
-      width: 50%;
     }
-
     .product-info h2 {
       margin: 0 0 10px;
       color: #014a70;
     }
-
     .product-info ul {
       padding-left: 20px;
     }
-
     .back-btn {
-      display: block;
+      display: block; 
       margin: 30px auto 0;
       width: fit-content;
       padding: 10px 20px;
@@ -118,23 +314,7 @@
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="logo">
-      <img src="images/logo.png" alt="Logo" />
-    </div>
-    <ul class="nav-menu">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="ess-batteries.html">ESS-Battery</a></li>
-      <li><a href="solar-batteries.html">Solar-Battery</a></li>
-      <li><a href="career.html">CAREERS</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-  </div>
-
-  <!-- Page Content -->
   <h1>🔋 Akino 3W Batteries</h1>
-
   <div class="product-card">
     <img src="ev-100.jpg" alt="48V 100Ah" />
     <div class="product-info">
@@ -146,7 +326,6 @@
       </ul>
     </div>
   </div>
-
   <div class="product-card">
     <img src="ev-100.jpg" alt="48V 200Ah" />
     <div class="product-info">
@@ -158,37 +337,8 @@
       </ul>
     </div>
   </div>
-
-  <a href="ev-batteries.html" class="back-btn">⬅ Back</a>
-
-  <!-- JS for Dropdowns if needed -->
-  <script>
-    function toggleMobileMenu() {
-      document.getElementById("navMenu").classList.toggle("active");
-    }
-
-    function toggleProductDropdown(event) {
-      event.preventDefault();
-      document.getElementById("productDropdown").classList.toggle("show");
-    }
-
-    function toggleSubMenu(event, submenuId) {
-      event.preventDefault();
-      document.getElementById(submenuId).classList.toggle("show");
-    }
-
-    window.onclick = function (e) {
-      if (!e.target.closest('.dropdown')) {
-        const dropdown = document.getElementById("productDropdown");
-        if (dropdown && dropdown.classList.contains('show')) {
-          dropdown.classList.remove('show');
-        }
-      }
-    }
-  </script>
-</body>
-</html>
-<!-- footer section start --><!-- Footer Start -->
+  <a href="ev-batteries.html" class="back-btn">⬅ Back </a>
+   <!-- footer section start --><!-- Footer Start -->
 <footer style="background-color: #355764; color: #fff; padding: 40px 0; font-family: 'Segoe UI', sans-serif;">
   <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
 
