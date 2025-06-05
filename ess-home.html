@@ -35,26 +35,31 @@
 </head>
 <body>
   <!-- header section start -->
-  <style>
+   <!-- header section start -->
+      <style>
         * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          
         }
     
         body {
           font-family: Arial, sans-serif;
           padding-top: 80px; /* space for fixed navbar */
+          background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+          
         }
     
         /* Navbar */
         .navbar {
           position: fixed;
-          top: 20px;
+          top: 0px;
           width: 100%;
+          margin-left: -30px;
           background-color: black;
           z-index: 1000;
-          padding: 10px 20px;
+          padding: 10px 16px;
           box-shadow: 0 2px 5px rgba(0,0,0,0.1);
           border-radius: 10px;
           display: flex;
@@ -86,7 +91,7 @@
           display: none;
           position: absolute;
           background-color: #deca1a;
-          min-width: 200px;
+          min-width: 180px;
           box-shadow: 0 4px 6px rgba(0,0,0,0.1);
           z-index: 1;
         }
@@ -139,10 +144,16 @@
         }
     
         /* Mobile Responsive */
-        @media (max-width: 992px) {
+        @media (max-width: 700px) {
           .hamburger {
             display: block;
           }
+          body {
+          font-family: Arial, sans-serif;
+          padding-top: 60px; /* space for fixed navbar */
+          background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+          margin-left: -30px; /* Center the navbar */
+        }
     
           .nav-menu {
             display: none;
@@ -178,7 +189,40 @@
           .sub-dropdown-content.show {
             display: block !important;
           }
-        }
+          @media screen and (max-width: 700px) {
+  .navbar {
+    height: 60px; /* Mobile me height kam kar diya */
+    padding-top: 0%;
+    margin-top: 0%; /* Navbar ko center me rakhne ke liye margin left */
+    margin-left:-30px ;
+  }
+  
+
+  .navbar .logo {
+    font-size: 15px; /* Logo chhota ho mobile me */
+  }
+
+  .navbar a {
+    font-size: 16px; /* Links thoda chhota ho mobile me */
+  }
+  
+  }
+}
+
+        
+    
+        /* Dropdowns for mobile */
+        @media (max-width: 992px) {
+          .dropdown-content,
+          .sub-dropdown-content {
+            position: static;
+            width: 100%;
+          }
+    
+          .sub-dropdown:hover .sub-dropdown-content {
+            display: block;
+          }
+        }                      
       </style>
     </head>
     <body>
@@ -205,7 +249,7 @@
     
               <!-- EV-Battery Submenu -->
               <li class="sub-dropdown">
-                <a href="#" onclick="toggleSubMenu(event, 'evSubmenu')">EV-Battery ▸</a>
+                <a href="ev-batteries.html" onclick="toggleSubMenu(event, 'evSubmenu')">EV-Battery ▸</a>
                 <ul id="evSubmenu" class="sub-dropdown-content">
                   <li><a href="ev-2w-scooty.html" target="_blank">2-Wheelers Batteries</a></li>
                   <li><a href="ev-3w-rickshaw.html" target="_blank">3-Wheelers Batteries</a></li>
@@ -215,7 +259,7 @@
     
               <!-- ESS-Battery Submenu -->
               <li class="sub-dropdown">
-                <a href="#" onclick="toggleSubMenu(event, 'essSubmenu')">ESS-Battery ▸</a>
+                <a href="ess-batteries.html" onclick="toggleSubMenu(event, 'essSubmenu')">ESS-Battery ▸</a>
                 <ul id="essSubmenu" class="sub-dropdown-content">
                   <li><a href="ess-home.html" target="_blank">Telecom Li-ion Battery</a></li>
                   <li><a href="ess-commercial.html" target="_blank">Home Inverter Li-ion Battery</a></li>
@@ -265,7 +309,7 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
+      margin-top:25px;
       padding: 30px;
       background: #f5fbff;
       animation: fadeIn 1s ease-in-out;

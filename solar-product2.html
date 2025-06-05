@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>solar-product2</title>
+      <title>solar-product1</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -33,26 +33,30 @@
    </head>
    <body>
       <!-- header section start -->
-       <style>
+      <style>
         * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          
         }
     
         body {
           font-family: Arial, sans-serif;
           padding-top: 80px; /* space for fixed navbar */
+          background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+          
         }
     
         /* Navbar */
         .navbar {
           position: fixed;
-          top: 30px;
+          top: 0px;
           width: 100%;
+          margin-left: 0px;
           background-color: black;
           z-index: 1000;
-          padding: 10px 20px;
+          padding: 10px 16px;
           box-shadow: 0 2px 5px rgba(0,0,0,0.1);
           border-radius: 10px;
           display: flex;
@@ -84,7 +88,7 @@
           display: none;
           position: absolute;
           background-color: #deca1a;
-          min-width: 200px;
+          min-width: 180px;
           box-shadow: 0 4px 6px rgba(0,0,0,0.1);
           z-index: 1;
         }
@@ -137,10 +141,16 @@
         }
     
         /* Mobile Responsive */
-        @media (max-width: 992px) {
+        @media (max-width: 700px) {
           .hamburger {
             display: block;
           }
+          body {
+          font-family: Arial, sans-serif;
+          padding-top: 60px; /* space for fixed navbar */
+          background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+          margin-left: -30px; /* Center the navbar */
+        }
     
           .nav-menu {
             display: none;
@@ -176,7 +186,40 @@
           .sub-dropdown-content.show {
             display: block !important;
           }
-        }
+          @media screen and (max-width: 700px) {
+  .navbar {
+    height: 60px; /* Mobile me height kam kar diya */
+    padding-top: 0%;
+    margin-top: 0%; /* Navbar ko center me rakhne ke liye margin left */
+    margin-right:-30px ;
+  }
+  
+
+  .navbar .logo {
+    font-size: 15px; /* Logo chhota ho mobile me */
+  }
+
+  .navbar a {
+    font-size: 16px; /* Links thoda chhota ho mobile me */
+  }
+  
+  }
+}
+
+        
+    
+        /* Dropdowns for mobile */
+        @media (max-width: 992px) {
+          .dropdown-content,
+          .sub-dropdown-content {
+            position: static;
+            width: 100%;
+          }
+    
+          .sub-dropdown:hover .sub-dropdown-content {
+            display: block;
+          }
+        }                      
       </style>
     </head>
     <body>
@@ -262,42 +305,124 @@
 </head>
 <body class="fade-in">
   <h1 class="heading">🔋 11.1V Battery Models</h1>
+
   <div class="card-container">
     <div class="card-box">
       <h3>🔋 11.1V 5Ah</h3>
-      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life🌐 IoT Enabled<br>🔥 Overheat Protection</p>
+      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life<br>🌐 IoT Enabled<br>🔥 Overheat Protection</p>
     </div>
     <div class="card-box">
       <h3>🌞 11.1V 10Ah</h3>
-      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life🌐 IoT Enabled<br>🔥 Overheat Protection</p>
+      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life<br>🌐 IoT Enabled<br>🔥 Overheat Protection</p>
     </div>
     <div class="card-box">
-      <h3>🛡️ 11.1V 15Ah</h3>
-      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life🌐 IoT Enabled<br>🔥 Overheat Protection</p>
+      <h3>🛡️ 11.1V  15Ah</h3>
+      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life<br>🌐 IoT Enabled<br>🔥 Overheat Protection</p>
     </div>
     <div class="card-box">
-      <h3>🚀 11.1V 18Ah</h3>
-      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life🌐 IoT Enabled<br>🔥 Overheat Protection</p>
+      <h3>🚀  11.1V  20Ah</h3>
+      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life<br>🌐 IoT Enabled<br>🔥 Overheat Protection</p>
     </div>
     <div class="card-box">
-      <h3>🔋 11.1V 24Ah</h3>
-      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life🌐 IoT Enabled<br>🔥 Overheat Protection</p>
-    </div> 
+      <h3>🔋 11.1V  25Ah</h3>
+      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life<br>🌐 IoT Enabled<br>🔥 Overheat Protection</p>
+    </div>
+    <div class="card-box">
+      <h3>🔋 11.1V 30Ah</h3>
+      <p>⚡ Fast Charging<br>🔧 Maintenance Free<br>💡 Smart BMS<br>🔋 Deep Cycle Life<br>🌐 IoT Enabled<br>🔥 Overheat Protection</p>
+    </div>
   </div>
+
+  <a href="solar-batteries.html" class="back-btn">⬅ Back</a>
+
   <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7fafd;
+      color: #333;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .heading {
+      text-align: center;
+      padding: 40px 10px 20px;
+      font-size: 2rem;
+      color: #014a70;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card-box {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid #014a70;
+    }
+
+    .card-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-box h3 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+      color: #014a70;
+    }
+
+    .card-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
     .back-btn {
-     display: block;
-     margin: 30px auto 0;
-     width: fit-content;
-     padding: 10px 20px;
-     background-color: #014a70;
-     color: white;
-     text-decoration: none;
-     border-radius: 8px;
-   }
- </style>
-  <a href="solar-batteries.html" class="back-btn">⬅ Back </a>
-  <!-- footer section start --><!-- Footer Start -->
+      display: block;
+      margin: 40px auto;
+      width: fit-content;
+      padding: 12px 24px;
+      background-color: #014a70;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #026999;
+    }
+
+    @media (max-width: 600px) {
+      .heading {
+        font-size: 1.5rem;
+      }
+
+      .card-box {
+        padding: 16px;
+      }
+
+      .card-box h3 {
+        font-size: 1.1rem;
+      }
+
+      .card-box p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</body>
+ <!-- footer section start --><!-- Footer Start -->
   <footer style="background-color: #355764; color: #fff; padding: 40px 0; font-family: 'Segoe UI', sans-serif;">
     <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
   
@@ -391,7 +516,7 @@
                          <a href="https://www.linkedin.com/company/akinotech/" target="_blank" style="margin-right: 10px;">
                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="25">
                          </a>
-                          <a href="https://www.facebook.com/share/1C72sVSULD/" target="_blank" style="margin-right: 10px;">
+                         <a href="https://www.facebook.com/share/1C72sVSULD/" target="_blank" style="margin-right: 10px;">
                          <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" width="25">
                        </a>
                        <a href="https://www.instagram.com/akino_tech?utm_source=qr&igsh=c2NmdzN2dmo4aXNw" target="_blank" style="margin-right: 10px;">
