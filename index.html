@@ -310,9 +310,9 @@
     
          
          <!-- banner section start -->
-        <style>
+             <style>
+  /* Default carousel heading style */
   .carousel-caption h1 {
-     position: fixed;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 8px 20px;
@@ -324,32 +324,30 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 3vw;  
+    font-size: 3vw;
     max-width: 90%;
     text-align: left;
   }
 
-  /* For mobile screens */
+  /* Mobile screens */
   @media (max-width: 768px) {
     .carousel-caption h1 {
-      font-size: 13px;
-      top: -130px;
-      left: 1px;
+      font-size: 10px;
+      top: -10px; /* Adjusted from -130px to visible position */
+      left: 10px;
       padding: 6px 15px;
     }
-    
   }
 
-  /* For large screens */
+  /* Large screens */
   @media (min-width: 1025px) {
     .carousel-caption h1 {
       font-size: 26px;
-      top: -1000%;
+      top: 0px; /* Adjusted from -1000% to visible position */
       left: 10%;
     }
   }
-</style>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+</style><div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
