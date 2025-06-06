@@ -40,25 +40,27 @@
           box-sizing: border-box;
         }
     
-        body {
-          font-family: Arial, sans-serif;
-          padding-top: 80px; /* space for fixed navbar */
-        }
-    
-        /* Navbar */
-        .navbar {
-          position: fixed;
-          top: 0px;
-          width: 100%;
-          background-color: black;
-          z-index: 1000;
-          padding: 10px 20px;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-          border-radius: 10px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
+       /* Reset margin and padding for body and navbar */
+body, .navbar {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling fix */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000; /* ya jo bhi aapka color ho */
+  display: flex;
+  justify-content: space-between; /* ya center/left/right as per content */
+  align-items: center;
+  padding: 10px 20px; /* horizontal padding only */
+  box-sizing: border-box;
+  z-index: 999;
+}
+
     
         .logo img {
           height: 60px;
