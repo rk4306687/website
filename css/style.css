@@ -343,5 +343,187 @@ textarea#comment::placeholder {
   }
   
   /* Main product styling */
+input.email-bt::placeholder {
+    color: #292929;
+}
+
+.massage-bt {
+    color: #292929;
+    width: 100%;
+    height: 110px;
+    font-size: 18px;
+    padding: 40px 20px 10px;
+    background-color: #fefeff;
+    border: 0px;
+    border-radius: 30px;
+}
+
+textarea#comment::placeholder {
+    color: #292929;
+}
+
+.send_btn {
+    width: 170px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.send_btn a {
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 0px;
+    background-color: #f7c17b;
+    border-radius: 10px;
+}
+
+.send_btn a:hover {
+    color: #000;
+    background-color: #ffffff;
+}
+/* contact section end*/
+/* footer section start*/
+
+.footer_section {
+    width: 100%;
+    -webkit-margin-top-collapse: collapse;
+    float: left;
+    background-color: #355764;
+
+    height: auto;
+    background-size: cover;
+    margin-top: 0%;
+    padding: 90px 0px;
+    
+    
+}
+.contact_section {
+  width: 100%;
+  float: left;
+  height: auto;
+  padding-bottom: 90px;
+  margin-top: -30%;
+  
+  
+}
+
+.contact_main {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.request_text {
+  width: 100%;
+  float: left;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.email-bt {
+  color: #292929;
+  width: 100%;
+  height: 55px;
+  font-size: 18px;
+  padding: 20px;
+  background-color: #fefeff;
+  border: 0px;
+  border-radius: 30px;
+}
+.call_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #dfdfdf;
+    padding-top: -10px;
+}
+
+.email_text {
+    width: 70%;
+    float: left;
+    font-size: 16px;
+    color: #9e9c9c;
+    background-color: #ffffff;
+    padding: 8px 15px;
+    margin-top: 40px;
+    border: 0px;
+}
+
+
+.call_text a{
+    color: #dfdfdf;
+}
+.call_text a:hover{
+    color: #f7c17b;
+}
+.padding_left_0{
+    padding-left: 15px;
+}
+
+.social_icon {
+    width: 100%;
+    float: left;
+    padding-top: 20px;
+}
+
+.social_icon ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.social_icon li {
+    float: left;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.copyright_section {
+    width: 100%;
+    float: left;
+    background-color: #ffffff;
+    height: auto;
+}
+
+.copyright_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    color: #151515;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.copyright_text a {
+    color: #151515;
+}
+
+.copyright_text a:hover {
+    color: #f7c17b;
+}
+
+.margin_top_90 {
+    margin-top: 90px;
+}
+
+.margin_90 {
+    margin: 90px 0px;
+}
+
+#navbarSupportedContent{
+    transform: translateX(100vw);
+}
+
+#navbarSupportedContent.nav-normal{
+    transform: none;
+}
 
   
