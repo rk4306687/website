@@ -221,9 +221,9 @@ body, .navbar {
                   <li><a href="ess-commercial.html" target="_blank">Home Inverter Li-ion Battery</a></li>
                   <li><a href="ess-backup.html" target="_blank">High Voltage ESS Li-ion Battery</a></li>
                   <li><a href="ess-industrial.html" target="_blank">Wall-Mounted Li-ion Battery</a></li>
-                  <li><a href="ess-hybrid.html" target="_blank">UPS (Data Center) Li-ion Battery</a></li>
                 </ul>
               </li>
+               <li><a href="ess-hybrid.html" target="_blank">UPS- Inverter</a></li>
     
               <!-- Solar Battery -->
               <li><a href="solar-batteries.html" target="_blank">Solar-Battery</a></li>
@@ -261,128 +261,186 @@ body, .navbar {
           }
         }
       </script>
+  <title>AKINO E-CYCLE BATTERY</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
-      padding: 10px;
+      padding: 20px;
     }
+
     h1 {
-      margin-top: 80px; /* Navbar height se thoda zyada margin do */
+      margin-top: 80px;
+      margin-bottom: 30px;
       text-align: center;
       font-size: 2em;
-    
-    
-    }
-    .product-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0px;
-  justify-content: center;
-  margin: auto;
-}
-
-    
-    .product-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background-color: white;
-      margin: 10px auto;
-      max-width: 300px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      
-    }
-    .product-card img {
-      width: 100%;
-      height: 5 0px;
-      object-fit: cover;
-    }
-    .product-info {
-      padding: 15px;
-    }
-    .product-info h2 {
-      margin: 0 0 10px;
       color: #014a70;
     }
+
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/3;
+      object-fit: contain;
+      background-color: #f1f1f1;
+    }
+
+    .product-info {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-info h2 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      color: #014a70;
+      text-align: center;
+    }
+
     .product-info ul {
       padding-left: 20px;
+      margin-bottom: 0;
     }
+
+    .product-info li {
+      margin-bottom: 6px;
+      color: #333;
+      font-size: 0.95em;
+    }
+
     .back-btn {
-      display: block; 
-      margin: 10px auto 0;
-      width: fit-content;
-      padding: 10px 20px;
+      display: inline-block;
+      margin: 40px auto 0;
+      padding: 12px 25px;
       background-color: #014a70;
       color: white;
       text-decoration: none;
       border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #012e45;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .product-info h2 {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
   <h1>🔋 AKINO E-CYCLE BATTERY</h1>
+
   <div class="product-container">
     <div class="product-card">
-      <img src="cycle10.jpeg" alt="48V 100Ah" />
+      <img src="cycle48w.png" alt="48V 25Ah Battery" />
       <div class="product-info">
-        <h2>36V 25Ah</h2>
+        <h2>48V 25Ah</h2>
         <ul>
           <li>✅ Long cycle life</li>
           <li>✅ Lightweight and portable</li>
-          <li>✅ Quick battery life</li>
+          <li>✅ Fast charging support</li>
         </ul>
       </div>
     </div>
-  
+
     <div class="product-card">
-      <img src="cycle10.jpeg" alt="48V 200Ah" />
+      <img src="cycle48w10ah.png" alt="48V 10Ah Battery" />
+      <div class="product-info">
+        <h2>48V 10Ah</h2>
+        <ul>
+          <li>✅ Higher range per charge</li>
+          <li>✅ Ideal for e-cycles</li>
+          <li>✅ Water-resistant casing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="cycle10.jpeg" alt="36V 25Ah Battery" />
+      <div class="product-info">
+        <h2>36V 25Ah</h2>
+        <ul>
+          <li>✅ Extended backup time</li>
+          <li>✅ Compact design</li>
+          <li>✅ Eco-friendly technology</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="cycle10.jpeg" alt="36V 10Ah Battery" />
       <div class="product-info">
         <h2>36V 10Ah</h2>
         <ul>
-          <li>✅ Higher range per charge</li>
-          <li>✅ Ideal for e-cycles and bike</li>
-          <li>✅ Durable and waterproof casing</li>
+          <li>✅ Lightweight and efficient</li>
+          <li>✅ Perfect for daily commute</li>
+          <li>✅ Smart BMS integrated</li>
         </ul>
       </div>
     </div>
   </div>
-  
-  <a href="ev-batteries.html" class="back-btn">⬅ Back </a>
-   <!-- footer section start --><!-- Footer Start -->
-<footer style="background-color: #355764; color: #fff; padding: 40px 0; font-family: 'Segoe UI', sans-serif;">
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+  <div style="text-align: center;">
+    <a href="ev-batteries.html" class="back-btn">⬅ Back</a>
+  </div>   <!-- Footer Start -->
+<!-- Stylish Responsive Footer Start -->
+<footer style="background-color: #0f1e2e; color: #fff; font-family: 'Segoe UI', sans-serif; padding: 60px 20px 30px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
 
     <!-- About Company -->
-    <div style="flex: 1; min-width: 220px; margin: 20px;">
-      <h3 style="border-bottom: 2px solid #4caf50; padding-bottom: 5px;">About Company</h3>
-      <p>Akinotech provides India’s most advanced lithium battery packs engineered with the latest technology for Indian conditions.</p>
-      <!-- Social Icons -->
-     </div>
-
-    <!-- Useful Links -->
-    <div style="flex: 1; min-width: 180px; margin: 20px;">
-      <h3 style="border-bottom: 2px solid #4caf50; padding-bottom: 5px;">Useful Links</h3>
-      <ul style="list-style: none; padding: 0;">
-        <li><a href="index.html" style="color: #fff; text-decoration: none;">→ Home</a></li>
-        <li><a href="about.html" style="color: #fff; text-decoration: none;">→ About Us</a></li>
-        <li><a href="contact.html" style="color: #fff; text-decoration: none;">→ Contact Us</a></li>
-        <li><a href="career.html" style="color: #fff; text-decoration: none;">→ Careers</a></li>
-      </ul>
-    </div>
-
-    <!-- Product Portfolio -->
-    <div style="flex: 1; min-width: 200px; margin: 20px;">
-      <h3 style="border-bottom: 2px solid #4caf50; padding-bottom: 5px;">Product Portfolio</h3>
-      <ul style="list-style: none; padding: 0;">
+  
+    <!-- Storage Solution -->
+    <div style="flex: 1 1 180px;">
+      <h3 style="margin-bottom: 15px; color: #ff9f43;"> Product Portfolio</h3>
+       <ul style="list-style: none; padding: 0;">
        <li><a href="solar-batteries.html" style="color: #fff; text-decoration: none;">→ Solar Batteries</a></li>
         <li><a href="ev-batteries.html" style="color: #fff; text-decoration: none;">→ EV Batteries</a></li>
         <li><a href="ev-cycle.html" style="color: #fff; text-decoration: none;">→E-CYCLE Batteries </a></li>
         <li><a href="ev-2w-scooty.html" style="color: #fff; text-decoration: none;">→ EV-2-wheelers Batteries</a></li>
         <li><a href="ev-3w-rickshaw.html" style="color: #fff; text-decoration: none;">→ EV-3W-Wheelers Batteries</a></li>
         <li><a href="ess-batteries.html" style="color: #fff; text-decoration: none;">→ ESS Batteries</a></li>
-        <li><a href="ess-hybrid.html" style="color: #fff; text-decoration: none;">→ UPS Batteries</a></li>
+        <li><a href="ess-hybrid.html" style="color: #fff; text-decoration: none;">→ UPS- Inverter</a></li>
         <li><a href="ess-home.html" style="color: #fff; text-decoration: none;">→ Telecom Batteries</a></li>
         <li><a href="ess-industrial.html" style="color: #fff; text-decoration: none;">→ Wall-mounted Batteries</a></li>
         <li><a href="ess-commercial.html" style="color: #fff; text-decoration: none;">→ Home Inverter Li-ion Battery</a></li>
@@ -390,113 +448,52 @@ body, .navbar {
  </ul>
     </div>
 
-    <!-- Contact Info -->
-    <div style="flex: 1; min-width: 220px; margin: 20px;">
-      <h3 style="border-bottom: 2px solid #4caf50; padding-bottom: 5px;">Contact Us</h3>
-      <p><strong>Number:</strong><br>044-42027488</p>
-      <p><strong>Toll Free Number:</strong><br>18005697333</p>
-      <p><strong>Location:</strong><br> AKINO TECH PRIVATE LIMITED Factory: No.150,Mummalpattu(village), Chinnay Chatram, Attuputhur(po),kancheepuram-631561 </p>
+    <!-- Company -->
+    <div style="flex: 1 1 180px;">
+      <h3 style="color: #ff9f43;">About Akino Tech</h3>
+<p style="color: #ccc; line-height: 1.6;">
+  Akino Tech is a leading provider of advanced lithium-ion battery solutions for Electric Vehicles, Solar Power, Telecom, ESS, and E-Mobility. Our mission is to accelerate clean energy through reliable, safe, and smart battery technology.
+</p>
+
+        <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #fff; text-decoration: none;">→ Home</a></li>
+        <li><a href="about.html" style="color: #fff; text-decoration: none;">→ About Us</a></li>
+        
+        <li><a href="contact.html" style="color: #fff; text-decoration: none;">→ Contact Us</a></li>
+        <li><a href="career.html" style="color: #fff; text-decoration: none;">→ Careers</a></li>
+      </ul>
+    </div>
+
+    <!-- Policies -->
+   
+
+    <!-- Contact Information -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="margin-bottom: 15px; color: #ff9f43;">Contact Us</h3>
+     
+      <p><strong>Number:</strong>044-42027488</p>
+      <p><strong>Toll Free Number:</strong>18005697333</p>
+      <p><strong>Location:</strong><br> AKINO TECH PRIVATE LIMITED Factory:<br> No.150,Mummalpattu(village), Chinnay Chatram, Attuputhur(po),kancheepuram-631561 </p>
+      <div style="margin-top: 15px;">
+        <a href="https://www.facebook.com/share/1C72sVSULD/" target="_blank" style="margin-right: 10px;"><img src="https://img.icons8.com/color/32/facebook-new.png" alt="Facebook" /></a>
+        <a href="https://twitter.com" target="_blank" style="margin-right: 10px;"><img src="https://img.icons8.com/color/32/twitter--v1.png" alt="Twitter" /></a>
+        <a href="https://www.instagram.com/akino_tech?utm_source=qr&igsh=c2NmdzN2dmo4aXNw" target="_blank" style="margin-right: 10px;"><img src="https://img.icons8.com/color/32/instagram-new--v1.png" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/company/akinotech/" target="_blank" style="margin-right: 10px;"><img src="https://img.icons8.com/color/32/linkedin-circled--v1.png" alt="LinkedIn" /></a>
+        <a href="https://www.youtube.com/channel/UCDCdQaaAS4aNY0g_WwR4luw" target="_blank"><img src="https://img.icons8.com/color/32/youtube-play.png" alt="YouTube" /></a>
+      </div>
     </div>
 
   </div>
+
+  <hr style="margin: 40px auto 20px; border-color: #333; max-width: 1200px;">
+  <p style="text-align: center; color: #888; font-size: 14px;">
+    © 2025 Akino Tech. All Rights Reserved.
+  </p>
 </footer>
+<!-- Stylish Responsive Footer End -->
+
 <!-- Footer End -->
-
-     <div class="footer_section layout_padding">
-        <div class="container-fluid">
-           <div class="row">
-              <div class="col-lg-8 col-sm-12 padding_0">
-                 <div class="map_main">
-                    <div class="map-responsive">
-                       <div class="contact_section layout_padding">
-                          <div class="container">
-                             <div class="contact_main">
-                                <h1 class="request_text">A Call Back</h1>
-                                <form action="/action_page.php">
-                                   <div class="form-group">
-                                      <input type="text" class="email-bt" placeholder="Name" name="Name">
-                                   </div>
-                                   <div class="form-group">
-                                      <input type="text" class="email-bt" placeholder="Email" name="Name">
-                                   </div>
-                                   <div class="form-group">
-                                      <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
-                                   </div>
-                                   <div class="form-group">
-                                      <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                                   </div>
-                                </form>
-                                <div class="send_btn"><a href="https://wa.me/918939433755">SEND</a></div>
-                             </div>
-                          </div>
-                       </div>
-                     <!---- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d455398.1590385314!2d79.91531488685787!3d13.18469667757593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1744089622662!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-                    </div>
-                 </div>
-              </div>
-              <div class="col-lg-4 col-sm-12">
-                <div class="call_text"><a href="https://maps.app.goo.gl/bvcvJc9uhjsrHJtw6"><img src="images/map-icon.png"><span class="padding_left_0">Page when looking at its layou</span></a></div>
-                 <div class="call_text"><a href="#"><img src="images/call-icon.png"><span class="padding_left_0">Call Now  +91-8939433755</span></a></div>
-                 <div class="call_text"><a href=""><img src="images/mail-icon.png"><span class="padding_left_0">SALES@AKINOTECH.COM</span></a></div>
-                 <div class="social_icon">
-                    
-                     <div style="margin-top: 20px;">
-                       <a href="https://www.linkedin.com/company/akinotech/" target="_blank" style="margin-right: 10px;">
-                         <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="25">
-                       </a>
-                       <a href="https://www.facebook.com/share/1C72sVSULD/" target="_blank" style="margin-right: 10px;">
-                         <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" width="25">
-                       </a>
-                       <a href="https://www.instagram.com/akino_tech?utm_source=qr&igsh=c2NmdzN2dmo4aXNw" target="_blank" style="margin-right: 10px;">
-                         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="25">
-                       </a>
-                       <a href="https://www.youtube.com/channel/UCDCdQaaAS4aNY0g_WwR4luw" target="_blank">
-                         <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="25">
-                       </a>
-                     </div>
-                 </div>
-                 <input type="text" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
-                 
-              </div>
-           </div>
-        </div>
-     </div>
-     <!-- footer section end -->
-     <!-- copyright section start -->
-     <div class="copyright_section">
-        <div class="container">
-           <p class="copyright_text">Copyright 2019 All Right Reserved By.<a href="https://html.design"> Free  html Templates</p>
-        </div>
-     </div>
-     <!-- copyright section end -->    
-     <!-- Javascript files-->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/popper.min.js"></script>
-     <script src="js/bootstrap.bundle.min.js"></script>
-     <script src="js/jquery-3.0.0.min.js"></script>
-     <script src="js/plugin.js"></script>
-     <!-- sidebar -->
-     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-     <script src="js/custom.js"></script>
-     <!-- javascript --> 
-     <script src="js/owl.carousel.js"></script>
-     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-     <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-         
-        }
-
-        $("#main").click(function(){
-            $("#navbarSupportedContent").toggleClass("nav-normal")
-        })
-     </script> <a href="https://wa.me/918939433755" class="whatsapp_float" target="_blank">
+<a href="https://wa.me/918939433755" class="whatsapp_float" target="_blank">
        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp">
     </a>
     
