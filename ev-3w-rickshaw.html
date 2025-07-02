@@ -431,73 +431,156 @@
 <a href="ev-batteries.html" class="back-btn">⬅ Back</a>
 <!-- footer section start --><!-- Footer Start -->
 <!-- Footer Start -->
-<!-- Stylish Responsive Footer Start -->
-<footer style="background-color: #0f1e2e; color: #fff; font-family: 'Segoe UI', sans-serif; padding: 60px 20px 30px;">
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
 
-    <!-- About Company -->
-  
-    <!-- Storage Solution -->
-    <div style="flex: 1 1 150px;">
-      <h3 style="margin-bottom: 15px; color: #ff9f43;"> Product Portfolio</h3>
-       <ul style="list-style: none; padding: 0;">
-       <li><a href="solar-batteries.html" style="color: #fff; text-decoration: none;">→ Solar Batteries</a></li>
-        <li><a href="ev-batteries.html" style="color: #fff; text-decoration: none;">→ EV Batteries</a></li>
-        <li><a href="ev-cycle.html" style="color: #fff; text-decoration: none;">→ E-CYCLE Batteries </a></li>
-        <li><a href="ev-2w-scooty.html" style="color: #fff; text-decoration: none;">→ EV-2-wheelers Batteries</a></li>
-        <li><a href="ev-3w-rickshaw.html" style="color: #fff; text-decoration: none;">→ EV-3W-Wheelers Batteries</a></li>
-        <li><a href="ess-batteries.html" style="color: #fff; text-decoration: none;">→ ESS Batteries</a></li>
-        <li><a href="ess-home.html" style="color: #fff; text-decoration: none;">→ Telecom Batteries</a></li>
-        <li><a href="ess-industrial.html" style="color: #fff; text-decoration: none;">→ Wall-mounted Batteries</a></li>
-        <li><a href="ess-commercial.html" style="color: #fff; text-decoration: none;">→ Home Inverter Lithium Battery</a></li>
-        <li><a href="ess-backup.html" style="color: #fff; text-decoration: none;">→ High Voltage ESS Lithium Battery</a></li>
-        <li><a href="ess-hybrid.html" style="color: #fff; text-decoration: none;">→ UPS-Inverter</a></li>
-        
- </ul>
-    </div>
+<style>
+  .footer-container {
+    background-color: #0f1e2e;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 60px 20px 30px;
+  }
 
-    <!-- Company -->
-    <div style="flex: 1 1 30px;">
-      <h3 style="color: #ff9f43;">About Akino Tech</h3>
-<p style="color: #ccc; line-height: 1.6;">
-  Akino Tech is a leading provider of advanced lithium-ion battery solutions for Electric Vehicles, Solar Power, Telecom, ESS, and E-Mobility. Our mission is to accelerate clean energy through reliable, safe, and smart battery technology.
-</p>
+  .footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
 
-        <ul style="list-style: none; padding: 0;">
-        <li><a href="index.html" style="color: #fff; text-decoration: none;">→ Home</a></li>
-        <li><a href="about.html" style="color: #fff; text-decoration: none;">→ About Us</a></li>
-        
-        <li><a href="contact.html" style="color: #fff; text-decoration: none;">→ Contact Us</a></li>
-        <li><a href="career.html" style="color: #fff; text-decoration: none;">→ Careers</a></li>
+  .footer-section {
+    flex: 1 1 250px;
+  }
+
+  .footer-section h3 {
+    margin-bottom: 15px;
+    color: #ff9f43;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .footer-section p {
+    color: #ccc;
+    line-height: 1.6;
+  }
+
+  .footer-social {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-social a img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer-bottom {
+    margin: 40px auto 20px;
+    border-color: #333;
+    max-width: 1200px;
+  }
+
+  .footer-copy {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-inner {
+      flex-direction: column;
+      gap: 40px;
+    }
+    .footer-social {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+  }
+</style>
+
+<footer class="footer-container">
+  <div class="footer-inner">
+
+    <!-- Product Portfolio -->
+    <div class="footer-section">
+      <h3>Product Portfolio</h3>
+      <ul>
+        <li><a href="solar-batteries.html">→ Solar Batteries</a></li>
+        <li><a href="ev-batteries.html">→ EV Batteries</a></li>
+        <li><a href="ev-cycle.html">→ E-CYCLE Batteries</a></li>
+        <li><a href="ev-2w-scooty.html">→ EV-2-wheelers Batteries</a></li>
+        <li><a href="ev-3w-rickshaw.html">→ EV-3W-Wheelers Batteries</a></li>
+        <li><a href="ess-batteries.html">→ ESS Batteries</a></li>
+        <li><a href="ess-home.html">→ Telecom Batteries</a></li>
+        <li><a href="ess-industrial.html">→ Wall-mounted Batteries</a></li>
+        <li><a href="ess-commercial.html">→ Home Inverter Lithium Battery</a></li>
+        <li><a href="ess-backup.html">→ High Voltage ESS Lithium Battery</a></li>
+        <li><a href="ess-hybrid.html">→ UPS-Inverter</a></li>
       </ul>
     </div>
 
-    <!-- Policies -->
-   
+    <!-- About Akino -->
+    <div class="footer-section">
+      <h3>About Akino Tech</h3>
+      <p>
+        Akino Tech is a leading provider of advanced lithium-ion battery solutions for Electric Vehicles, Solar Power, Telecom, ESS, and E-Mobility. Our mission is to accelerate clean energy through reliable, safe, and smart battery technology.
+      </p>
+      <ul>
+        <li><a href="index.html">→ Home</a></li>
+        <li><a href="about.html">→ About Us</a></li>
+        <li><a href="contact.html">→ Contact Us</a></li>
+        <li><a href="career.html">→ Careers</a></li>
+      </ul>
+    </div>
 
-    <!-- Contact Information -->
-    <div style="flex: 1  10px;">
-      <h3 style="margin-bottom: 15px; color: #ff9f43;">Contact Us</h3>
+    <!-- Contact Section -->
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+       <p><strong>Location:</strong><br>
+        AKINO TECH PRIVATE LIMITED Factory:<br>
+        No. 150, Mummalpattu(village),<br>
+        Chinnay Chatram, Attuputhur(PO),<br>
+        Kancheepuram-631561
+      </p>
       <p><strong>Number:</strong> 044-42027488</p>
       <p><strong>Toll Free Number:</strong> 18005697333</p>
       
-      <p><strong>Location:</strong><br> AKINO TECH PRIVATE LIMITED Factory:<br> No. 150, Mummalpattu(village), Chinnay Chatram, Attuputhur(PO), kancheepuram-631561 </p>
-      <div style="margin-top: 15px;">
-        <a href="https://www.facebook.com/share/1C72sVSULD/" target="_blank" style="margin-right: 10px;"><img src="https://img.icons8.com/color/32/facebook-new.png" alt="Facebook" /></a>
-        <a href="https://twitter.com" target="_blank" style="margin-right: 10px;"><img src="https://img.icons8.com/color/32/twitter--v1.png" alt="Twitter" /></a>
-        <a href="https://www.instagram.com/akino_tech?utm_source=qr&igsh=c2NmdzN2dmo4aXNw" target="_blank" style="margin-right: 10px;"><img src="https://img.icons8.com/color/32/instagram-new--v1.png" alt="Instagram" /></a>
-        <a href="https://www.linkedin.com/company/akinotech/" target="_blank" style="margin-right: 10px;"><img src="https://img.icons8.com/color/32/linkedin-circled--v1.png" alt="LinkedIn" /></a>
-        <a href="https://www.youtube.com/channel/UCDCdQaaAS4aNY0g_WwR4luw" target="_blank"><img src="https://img.icons8.com/color/32/youtube-play.png" alt="YouTube" /></a>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/1C72sVSULD/" target="_blank">
+          <img src="https://img.icons8.com/color/32/facebook-new.png" alt="Facebook" />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="https://img.icons8.com/color/32/twitter--v1.png" alt="Twitter" />
+        </a>
+        <a href="https://www.instagram.com/akino_tech?utm_source=qr&igsh=c2NmdzN2dmo4aXNw" target="_blank">
+          <img src="https://img.icons8.com/color/32/instagram-new--v1.png" alt="Instagram" />
+        </a>
+        <a href="https://www.linkedin.com/company/akinotech/" target="_blank">
+          <img src="https://img.icons8.com/color/32/linkedin-circled--v1.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.youtube.com/channel/UCDCdQaaAS4aNY0g_WwR4luw" target="_blank">
+          <img src="https://img.icons8.com/color/32/youtube-play.png" alt="YouTube" />
+        </a>
       </div>
     </div>
-
   </div>
 
-  <hr style="margin: 40px auto 20px; border-color: #333; max-width: 1200px;">
-  <p style="text-align: center; color: #888; font-size: 14px;">
-    © 2025 Akino Tech. All Rights Reserved.
-  </p>
+  <hr class="footer-bottom">
+  <p class="footer-copy">© 2025 Akino Tech. All Rights Reserved.</p>
 </footer>
+
 <!-- Stylish Responsive Footer End -->
 
 <!-- Footer End -->
