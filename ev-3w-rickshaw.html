@@ -33,38 +33,40 @@
    </head>
    <body>
       <!-- header section start -->
-    <style>
+      <style>
         * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          
         }
     
-       /* Reset margin and padding for body and navbar */
-body, .navbar {
-  margin: 0;
-  padding: 0;
-}
-
-/* Navbar styling fix */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #000; /* ya jo bhi aapka color ho */
-  display: flex;
-  justify-content: space-between; /* ya center/left/right as per content */
-  align-items: center;
-  padding: 10px 20px; /* horizontal padding only */
-  box-sizing: border-box;
-  z-index: 999;
-}
-
+        body {
+          font-family: Arial, sans-serif;
+          padding-top: 80px; /* space for fixed navbar */
+          background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+          margin-left: -30px; /* Center the navbar */
+        }
     
-        .logo img {
+        /* Navbar */
+        .navbar {
+          position: fixed;
+          top: 0px;
+          width: 100%;
+          background-color: black;
+          z-index: 1000;
+          padding: 10px 16px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+      .logo img {
           height: 60px;
         }
+  
     
         .nav-menu {
           display: flex;
@@ -86,7 +88,7 @@ body, .navbar {
           display: none;
           position: absolute;
           background-color: #deca1a;
-          min-width: 200px;
+          min-width: 180px;
           box-shadow: 0 4px 6px rgba(0,0,0,0.1);
           z-index: 1;
         }
@@ -139,10 +141,16 @@ body, .navbar {
         }
     
         /* Mobile Responsive */
-        @media (max-width: 992px) {
+        @media (max-width: 700px) {
           .hamburger {
             display: block;
           }
+          body {
+          font-family: Arial, sans-serif;
+          padding-top: 60px; /* space for fixed navbar */
+          background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+          margin-left: -30px; /* Center the navbar */
+        }
     
           .nav-menu {
             display: none;
@@ -178,7 +186,39 @@ body, .navbar {
           .sub-dropdown-content.show {
             display: block !important;
           }
-        }
+          @media screen and (max-width: 700px) {
+  .navbar {
+    height: 60px; /* Mobile me height kam kar diya */
+    padding-top: 0%;
+    margin-top: 0%; /* Navbar ko center me rakhne ke liye margin left */
+  }
+  
+
+  .navbar .logo {
+    font-size: 15px; /* Logo chhota ho mobile me */
+  }
+
+  .navbar a {
+    font-size: 16px; /* Links thoda chhota ho mobile me */
+  }
+  
+  }
+}
+
+        
+    
+        /* Dropdowns for mobile */
+        @media (max-width: 992px) {
+          .dropdown-content,
+          .sub-dropdown-content {
+            position: static;
+            width: 100%;
+          }
+    
+          .sub-dropdown:hover .sub-dropdown-content {
+            display: block;
+          }
+        }                      
       </style>
     </head>
     <body>
@@ -217,13 +257,15 @@ body, .navbar {
               <li class="sub-dropdown">
                 <a href="ess-batteries.html" onclick="toggleSubMenu(event, 'essSubmenu')">ESS-Battery ▸</a>
                 <ul id="essSubmenu" class="sub-dropdown-content">
-                  <li><a href="ess-home.html" target="_blank">Telecom Li-ion Battery</a></li>
-                  <li><a href="ess-commercial.html" target="_blank">Home Inverter Li-ion Battery</a></li>
-                  <li><a href="ess-backup.html" target="_blank">High Voltage ESS Li-ion Battery</a></li>
-                  <li><a href="ess-industrial.html" target="_blank">Wall-Mounted Li-ion Battery</a></li>
+                  <li><a href="ess-home.html" target="_blank">Telecom Lithium Battery</a></li>
+                  <li><a href="ess-commercial.html" target="_blank">Home Inverter Lithium Battery</a></li>
+                  <li><a href="ess-backup.html" target="_blank">High Voltage ESS Lithium Battery</a></li>
+                  <li><a href="ess-industrial.html" target="_blank">Wall-Mounted Lithium Battery</a></li>
+                  
                 </ul>
               </li>
-               <li><a href="ess-hybrid.html" target="_blank">UPS- Inverter</a></li>
+               <li><a href="ess-hybrid.html" target="_blank">UPS-Inverter</a></li>
+
     
               <!-- Solar Battery -->
               <li><a href="solar-batteries.html" target="_blank">Solar-Battery</a></li>
@@ -271,7 +313,7 @@ body, .navbar {
   }
 
   h1{
-    margin-top:80px;          /* navbar extra space */
+    margin-top:80px;          /* navbar के लिये extra space */
     text-align:center;
     font-size:2em;
   }
@@ -363,7 +405,7 @@ body, .navbar {
   </div>
 </div>
 <div class="product-card">
-  <img src="ev-100.jpg" alt="48V 100Ah battery">
+  <img src="3w51.png" alt="48V 100Ah battery">
   <div class="product-info">
     <h2>48V 100Ah</h2>
     <ul>
@@ -375,7 +417,7 @@ body, .navbar {
 </div>
 
 <div class="product-card">
-  <img src="3w51.png" alt="48V 200Ah battery">
+  <img src="ev-100.jpg" alt="48V 200Ah battery">
   <div class="product-info">
     <h2>48V 200Ah</h2>
     <ul>
@@ -401,15 +443,15 @@ body, .navbar {
        <ul style="list-style: none; padding: 0;">
        <li><a href="solar-batteries.html" style="color: #fff; text-decoration: none;">→ Solar Batteries</a></li>
         <li><a href="ev-batteries.html" style="color: #fff; text-decoration: none;">→ EV Batteries</a></li>
-        <li><a href="ev-cycle.html" style="color: #fff; text-decoration: none;">→E-CYCLE Batteries </a></li>
+        <li><a href="ev-cycle.html" style="color: #fff; text-decoration: none;">→ E-CYCLE Batteries </a></li>
         <li><a href="ev-2w-scooty.html" style="color: #fff; text-decoration: none;">→ EV-2-wheelers Batteries</a></li>
         <li><a href="ev-3w-rickshaw.html" style="color: #fff; text-decoration: none;">→ EV-3W-Wheelers Batteries</a></li>
         <li><a href="ess-batteries.html" style="color: #fff; text-decoration: none;">→ ESS Batteries</a></li>
-        <li><a href="ess-hybrid.html" style="color: #fff; text-decoration: none;">→UPS- Inverter</a></li>
+        <li><a href="ess-hybrid.html" style="color: #fff; text-decoration: none;">→UPS-Inverter</a></li>
         <li><a href="ess-home.html" style="color: #fff; text-decoration: none;">→ Telecom Batteries</a></li>
         <li><a href="ess-industrial.html" style="color: #fff; text-decoration: none;">→ Wall-mounted Batteries</a></li>
-        <li><a href="ess-commercial.html" style="color: #fff; text-decoration: none;">→ Home Inverter Li-ion Battery</a></li>
-        <li><a href="ess-backup.html" style="color: #fff; text-decoration: none;">→ High Voltage ESS Li-ion Battery</a></li>
+        <li><a href="ess-commercial.html" style="color: #fff; text-decoration: none;">→ Home Inverter Lithium Battery</a></li>
+        <li><a href="ess-backup.html" style="color: #fff; text-decoration: none;">→ High Voltage ESS Lithium Battery</a></li>
  </ul>
     </div>
 
