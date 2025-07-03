@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>E cycle</title>
+      <title>EV BATTERY</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -33,34 +33,35 @@
    </head>
    <body>
       <!-- header section start -->
-       <style>
+        <style>
         * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          
         }
     
-      /* Reset margin and padding for body and navbar */
-body, .navbar {
-  margin: 0;
-  padding: 0;
-}
-
-/* Navbar styling fix */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #000; /* ya jo bhi aapka color ho */
-  display: flex;
-  justify-content: space-between; /* ya center/left/right as per content */
-  align-items: center;
-  padding: 10px 20px; /* horizontal padding only */
-  box-sizing: border-box;
-  z-index: 999;
-}
-
+        body {
+          font-family: Arial, sans-serif;
+          padding-top: 80px; /* space for fixed navbar */
+          background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+          margin-left: -30px; /* Center the navbar */
+        }
+    
+        /* Navbar */
+        .navbar {
+          position: fixed;
+          top: 0px;
+          width: 100%;
+          background-color: black;
+          z-index: 1000;
+          padding: 10px 16px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
     
         .logo img {
           height: 60px;
@@ -86,7 +87,7 @@ body, .navbar {
           display: none;
           position: absolute;
           background-color: #deca1a;
-          min-width: 200px;
+          min-width: 180px;
           box-shadow: 0 4px 6px rgba(0,0,0,0.1);
           z-index: 1;
         }
@@ -139,10 +140,16 @@ body, .navbar {
         }
     
         /* Mobile Responsive */
-        @media (max-width: 992px) {
+        @media (max-width: 700px) {
           .hamburger {
             display: block;
           }
+          body {
+          font-family: Arial, sans-serif;
+          padding-top: 60px; /* space for fixed navbar */
+          background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+          margin-left: -30px; /* Center the navbar */
+        }
     
           .nav-menu {
             display: none;
@@ -178,7 +185,39 @@ body, .navbar {
           .sub-dropdown-content.show {
             display: block !important;
           }
-        }
+          @media screen and (max-width: 700px) {
+  .navbar {
+    height: 60px; /* Mobile me height kam kar diya */
+    padding-top: 0%;
+    margin-top: 0%; /* Navbar ko center me rakhne ke liye margin left */
+  }
+  
+
+  .navbar .logo {
+    font-size: 15px; /* Logo chhota ho mobile me */
+  }
+
+  .navbar a {
+    font-size: 16px; /* Links thoda chhota ho mobile me */
+  }
+  
+  }
+}
+
+        
+    
+        /* Dropdowns for mobile */
+        @media (max-width: 992px) {
+          .dropdown-content,
+          .sub-dropdown-content {
+            position: static;
+            width: 100%;
+          }
+    
+          .sub-dropdown:hover .sub-dropdown-content {
+            display: block;
+          }
+        }                      
       </style>
     </head>
     <body>
@@ -261,169 +300,250 @@ body, .navbar {
           }
         }
       </script>
-  <title>AKINO E-CYCLE BATTERY</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+      
+    
+         
+         <!-- banner section start -->
+         <style>
+  .carousel-caption h1 {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 3vw;  
+    max-width: 90%;
+    text-align: left;
+  }
+
+  /* For mobile screens */
+  @media (max-width: 768px) {
+    .carousel-caption h1 {
+      font-size: 13px;
+      top: -60px;
+      left: 1px;
+      padding: 6px 15px;
     }
+    
+  }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      padding: 20px;
+  /* For large screens */
+  @media (min-width: 1025px) {
+    .carousel-caption h1 {
+      font-size: 26px;
+      top: -1000%;
+      left: 10%;
     }
+  }
+</style>
 
-    h1 {
-      margin-top: 80px;
-      margin-bottom: 30px;
-      text-align: center;
-      font-size: 2em;
-      color: #014a70;
-    }
-
-    .product-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .product-card {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4/3;
-      object-fit: contain;
-      background-color: #f1f1f1;
-    }
-
-    .product-info {
-      padding: 15px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .product-info h2 {
-      margin-bottom: 10px;
-      font-size: 1.2em;
-      color: #014a70;
-      text-align: center;
-    }
-
-    .product-info ul {
-      padding-left: 20px;
-      margin-bottom: 0;
-    }
-
-    .product-info li {
-      margin-bottom: 6px;
-      color: #333;
-      font-size: 0.95em;
-    }
-
-    .back-btn {
-      display: inline-block;
-      margin: 40px auto 0;
-      padding: 12px 25px;
-      background-color: #014a70;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      text-align: center;
-      transition: background-color 0.3s ease;
-    }
-
-    .back-btn:hover {
-      background-color: #012e45;
-    }
-
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 1.5em;
-      }
-
-      .product-info h2 {
-        font-size: 1em;
-      }
-    }
-  </style>
-</head>
-<body>
-  <h1>🔋 AKINO E-CYCLE BATTERY</h1>
-
-  <div class="product-container">
-    <div class="product-card">
-      <img src="cycle48w10ah.png" alt="48V 25Ah Battery" />
-      <div class="product-info">
-        <h2>36V 25Ah</h2>
-        <ul>
-          <li>✅ Long cycle life</li>
-          <li>✅ Lightweight and portable</li>
-          <li>✅ Fast charging support</li>
-        </ul>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="WhatsAppev-Picsart-AiImageEnhancer.jpg" alt="Solar Battery">
+      <div class="carousel-caption d-md-block">
+        <h1>E-MOBILITY BATTERY</h1>
       </div>
     </div>
-
-    <div class="product-card">
-      <img src="cycle48w10ah.png" alt="48V 10Ah Battery" />
-      <div class="product-info">
-        <h2>36V 13Ah</h2>
-        <ul>
-          <li>✅ Higher range per charge</li>
-          <li>✅ Ideal for e-cycles</li>
-          <li>✅ Water-resistant casing</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img src="cycle48w10ah.png" alt="36V 25Ah Battery" />
-      <div class="product-info">
-        <h2>36V 7Ah</h2>
-        <ul>
-          <li>✅ Extended backup time</li>
-          <li>✅ Compact design</li>
-          <li>✅ Eco-friendly technology</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img src="cycle10.jpeg" alt="36V 10Ah Battery" />
-      <div class="product-info">
-        <h2>36V 10Ah</h2>
-        <ul>
-          <li>✅ Lightweight and efficient</li>
-          <li>✅ Perfect for daily commute</li>
-          <li>✅ Smart BMS integrated</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div style="text-align: center;">
-    <a href="ev-batteries.html" class="back-btn">⬅ Back</a>
-  </div>   <!-- Footer Start -->
+    
+          </div>
+          <link rel="stylesheet" href="style.css" />
+        </head>
+        <body>
+          <h1 class="title">EV-PRODUCT</h1>
+          <p>EV Products
+          Powering the future of mobility, Akino EV Products by Akino Tech are designed to deliver unmatched efficiency, reliability, and sustainability. As one of the leading EV product manufacturers in Chennai, we are committed to driving innovation in the electric vehicle (EV) industry with cutting-edge energy solutions.
+          
+          Whether you're a vehicle manufacturer or an EV enthusiast, our products provide the performance and durability needed for a seamless electric driving experience. As a trusted EV Product Manufacturer, we focus on creating eco-friendly, high-performance components that redefine mobility.</p>
+          
+          <h1 class="title">Why Akino EV Products?</h1>
+          <p>Electric vehicles demand robust and reliable systems, and Akino EV Products are engineered to meet these needs. With advanced technology and superior craftsmanship, our components deliver power, longevity, and safety for all types of electric vehicles.
+          
+          <p>✅ Advanced Technology : Packed with smart features for modern EV needs.</p>
+          <p>✅ High Performance : Built to withstand demanding usage conditions.</p>
+          <p>✅ Compatibility : Easily integrates into various EV designs and systems.</p>
+          <p>✅ Safety First : Developed with advanced safety mechanisms for reliable operation.</p>
+          <p>✅ Eco-Friendly : Manufactured using sustainable materials to support green mobility.</p>
+          
+          As one of the most trusted EV product manufacturers in Chennai, we guarantee that our offerings meet the highest quality standards, providing peace of mind for every customer.
+        </div>
+        <style>
+          body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+            overflow-x: hidden;
+          }
+      
+          body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 20% 20%, #b3e5fc88 10px, transparent 10px),
+                        radial-gradient(circle at 70% 30%, #b2dfdb88 15px, transparent 15px),
+                        radial-gradient(circle at 50% 80%, #ffecb388 12px, transparent 12px);
+            background-size: 200% 200%;
+            animation: bubbleMove 25s linear infinite;
+            z-index: -1;
+          }
+      
+          @keyframes bubbleMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+          }
+      
+          header {
+            text-align: center;
+            padding: 40px 20px 10px;
+            color: #014a70;
+          }
+      
+          header h1 {
+            font-size: 2.5rem;
+          }
+      
+          header p {
+            font-size: 18px;
+            color: #333;
+            max-width: 900px;
+            margin: 10px auto 30px;
+            line-height: 1.6;
+          }
+      
+          .applications {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+          }
+      
+          .app-card {
+            position: relative;
+            width: 320px;
+            height: 360px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            text-decoration: none;
+            color: inherit;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+          }
+      
+          .app-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            border: 2px solid #00bcd4;
+          }
+      
+          .app-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6);
+            transition: transform 0.5s ease;
+          }
+      
+          .app-card:hover img {
+            transform: scale(1.1);
+          }
+      
+          .overlay-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(120deg, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0.2) 90%);
+            z-index: 1;
+            text-align: center;
+          }
+      
+          .overlay-info h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px #000;
+            color: #fff;
+          }
+      
+          .overlay-info p {
+            font-size: 15px;
+            line-height: 1.5;
+            text-shadow: 1px 1px 4px #000;
+          }
+      
+          @media (max-width: 768px) {
+            .applications {
+              flex-direction: column;
+              align-items: center;
+            }
+          }
+        </style>
+      </head>
+      <body>
+      
+        <header>
+          <h1>⚡ Electric Vehicle (EV) Battery Applications</h1>
+          <p>
+            EV lithium-ion batteries provide efficient, eco-friendly energy storage for two-wheelers, three-wheelers, and electric cycles. Designed for high range, safety, and smart energy management, they are revolutionizing the way we drive.
+          </p>
+        </header>
+      
+        <section class="applications">
+      
+          <!-- EV 3W -->
+          <a href="ev-3w-rickshaw.html" class="app-card">
+            <img src="AUTO.jpg" alt="EV 3W Battery" />
+            <div class="overlay-info">
+              <h2>🚖 EV-3Wheelers Battery</h2>
+              <p>Long-range, rugged design for rickshaws with high load capacity & durable performance.</p>
+            </div>
+          </a>
+      
+          <!-- EV 2W -->
+          <a href="ev-2w-scooty.html" class="app-card">
+            <img src="evs.jpg" alt="EV 2W Battery" />
+            <div class="overlay-info">
+              <h2>🛵 EV-2Wheelers Battery</h2>
+              <p>Fast-charging, compact, and smart batteries designed for electric scooters and bikes.</p>
+            </div>
+          </a>
+      
+          <!-- EV Cycle -->
+          <a href="ev-cycle.html" class="app-card">
+            <img src="e-cycle.png" alt="E-Cycle Battery" />
+            <div class="overlay-info">
+              <h2>🚲 E-Cycle Battery</h2>
+              <p>Lightweight, portable, and efficient battery packs ideal for electric bicycles and e-mobility.</p>
+            </div>
+          </a>
+      
+        </section>
+      
+          
+          <!-- footer section start --><!-- Footer Start -->
+<!-- Footer Start -->
+<!-- Stylish Responsive Footer Start -->
 
 <style>
   .footer-container {
