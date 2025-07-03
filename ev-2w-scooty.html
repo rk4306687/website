@@ -369,167 +369,201 @@ body, .navbar {
     }
   </style>
 </head>
-<style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f9f9f9;
-    padding: 20px;
-  }
-
-  h2 {
-    text-align: center;
-    margin: 60px 0 30px;
-    color: #014a70;
-    font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem);
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    padding: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-
-  .card strong {
-    display: block;
-    color: #014a70;
-    font-size: 1.1rem;
-    margin: 10px 0;
-  }
-
-  .card ul {
-    text-align: left;
-    margin-top: 10px;
-    padding-left: 20px;
-  }
-
-  .card ul li {
-    margin-bottom: 5px;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .back-btn {
-    display: inline-block;
-    margin: 10px auto 0px;
-    padding: 10px 20px;
-    background-color: #014a70;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  @media screen and (max-width: 480px) {
-    .card img {
-      max-height: 160px;
+  <title>EV 2W Lithium Batteries</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
     }
-  }
-</style>
+
+    h2 {
+      text-align: center;
+      margin: 80px 0 30px;
+      color: #014a70;
+      font-size: clamp(1.8rem, 2.5vw + 1rem, 2.6rem);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: linear-gradient(to bottom right, #ffffff, #f1f6fa);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #dbe5f1;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .card img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+
+    .card strong {
+      color: #014a70;
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      text-align: left;
+      margin: 6px 0;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px 24px;
+      background-color: #014a70;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      .card p {
+        font-size: 0.88rem;
+      }
+
+      .card img {
+        max-height: 200px;
+      }
+    }
+  </style>
+</head>
 
 <body>
 
-<h2>🔋 EV 2-Wheelers Lithium Battery </h2>
+  <h2>🔋 EV 2-Wheelers Lithium Battery</h2>
 
-<!-- Main Voltage List -->
-<div id="main-products" class="container">
-  <div class="card" onclick="showSubProducts('48V')">
-    <img src="60-2w-removebg-preview.png" alt="48V Battery">
-     <strong>48V Batteries</strong>
+  <!-- Main Product List -->
+  <div id="main-products" class="container">
+    <div class="card" onclick="showSubProducts('48V')">
+      <img src="60-2w-removebg-preview.png" alt="48V Battery">
+      <strong>🔋 48V Batteries</strong>
+    </div>
+    <div class="card" onclick="showSubProducts('51V')">
+      <img src="2w51.png" alt="51V Battery">
+      <strong>🔋 51V Batteries</strong>
+    </div>
+    <div class="card" onclick="showSubProducts('60V')">
+      <img src="60-2w-removebg-preview.png" alt="60V Battery">
+      <strong>🔋 60V Batteries</strong>
+    </div>
+    <div class="card" onclick="showSubProducts('72V')">
+      <img src="2w51.png" alt="72V Battery">
+      <strong>🔋 72V Batteries</strong>
+    </div>
   </div>
-  <div class="card" onclick="showSubProducts('51V')">
-    <img src="2w51.png" alt="51V Battery">
-     <strong>51V Batteries</strong>
+
+  <a href="ev-batteries.html" class="back-btn">⬅ Back</a>
+
+  <!-- Sub-product Section -->
+  <div id="sub-products" class="hidden">
+    <div class="container" id="sub-list"></div>
   </div>
-  <div class="card" onclick="showSubProducts('60V')">
-    <img src="60-2w-removebg-preview.png" alt="60V Battery">
-     <strong>60V Batteries</strong>
-  </div>
-  <div class="card" onclick="showSubProducts('72V')">
-    <img src="2w51.png" alt="72V Battery">
-     <strong>72V Batteries</strong>
-  </div>
-</div>
 
-<a href="ev-batteries.html" class="back-btn">⬅ Back </a>
+  <script>
+    const productData = {
+      "48V": {
+        ahs: ["30Ah", "36Ah", "42Ah", "48Ah"],
+        descriptions: [
+          "🔋 48V 30Ah – Ideal for daily commute vehicles. Offers lightweight power, smooth handling, and fast charging.",
+          "⚡ 48V 36Ah – Designed for riders seeking a balance of efficiency and distance. Delivers steady energy on demand.",
+          "🚀 48V 42Ah – Suitable for medium to heavy-duty use. Enhanced speed and excellent backup in hilly terrains.",
+          "💪 48V 48Ah – Long-lasting and reliable. Optimized for delivery fleets and long-range scooters."
+        ]
+      },
+      "51V": {
+        ahs: ["30Ah", "36Ah", "42Ah", "48Ah"],
+        descriptions: [
+          "🔋 51V 30Ah – Smart power for advanced scooters. Better voltage stability and intelligent discharge profile.",
+          "⚡ 51V 36Ah – Reliable range, smart BMS, and quick charge support. Designed for riders who go the distance.",
+          "🚀 51V 42Ah – High-performance for urban rides. Perfect for hilly areas and traffic-intensive routes.",
+          "💪 51V 48Ah – Robust battery with intelligent temperature management. Designed for fleet operations."
+        ]
+      },
+      "60V": {
+        ahs: ["36Ah", "42Ah", "48Ah", "60Ah"],
+        descriptions: [
+          "⚡ 60V 36Ah – Faster acceleration and higher torque. Made for dual-motor vehicles and off-road scooters.",
+          "🚀 60V 42Ah – Premium power with extended range. Compatible with smart EV controllers.",
+          "🔋 60V 48Ah – Best-in-class performance for heavy EVs. Features high safety index and long lifespan.",
+          "💪 60V 60Ah – Industrial-grade battery. Supports high-speed, long-range operations with durability."
+        ]
+      },
+      "72V": {
+        ahs: ["36Ah", "42Ah", "60Ah"],
+        descriptions: [
+          "⚡ 72V 36Ah – Entry-level high voltage battery. Perfect for high-speed lightweight scooters.",
+          "🚀 72V 42Ah – Long mileage and quick charge. Advanced for e-motorcycles and premium 2W models.",
+          "💪 72V 60Ah – Rugged build and ultra-endurance. Used in racing e-bikes and commercial-grade scooters."
+        ]
+      }
+    };
 
-<!-- Sub-product Section with Details -->
-<div id="sub-products" class="hidden">
-  
-  <h2 id="sub-title">Sub Products</h2>
-  <div class="container" id="sub-list"></div>
-</div>
+    const productImages = {
+      "48V": "60-2w-removebg-preview.png",
+      "51V": "2w51.png",
+      "60V": "60-2w-removebg-preview.png",
+      "72V": "2w51.png"
+    };
 
-<script>
-  const productData = {
-    "48V": ["30Ah", "36Ah", "42Ah", "48Ah"],
-    "51V": ["30Ah", "36Ah", "42Ah", "48Ah"],
-    "60V": ["36Ah", "42Ah", "48Ah", "60Ah"],
-    "72V": ["36Ah", "42Ah", "60Ah"]
-  };
+    function showSubProducts(voltage) {
+      document.getElementById("main-products").classList.add("hidden");
+      document.getElementById("sub-products").classList.remove("hidden");
 
-  const featuresList = [
-    "🔋 High energy density",
-    "♻️ Long lifecycle (1800 @ 80% DOD)",
-    "⚡ Fast charging support",
-    "🧳 Lightweight & portable",
-    "🛡️ Smart BMS for protection"
-  ];
+      const subList = document.getElementById("sub-list");
+      subList.innerHTML = "";
 
-  function showSubProducts(voltage) {
-    document.getElementById("main-products").classList.add("hidden");
-    document.getElementById("sub-products").classList.remove("hidden");
-    document.getElementById("sub-title").textContent = `${voltage} Battery Sub-Products`;
+      const data = productData[voltage];
+      data.ahs.forEach((ah, index) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${productImages[voltage]}" alt="${voltage} ${ah}" />
+          <strong>${voltage} ${ah} Battery</strong>
+          <p>${data.descriptions[index]}</p>
+          <p><b>✨ Key Benefits:</b> Smart BMS, fast charging, compact build, stable discharge.</p>
+          <p><b>🔥 Challenges Overcome:</b> Heat management, overload protection, long-term reliability.</p>
+          <p><b>💡 Use Cases:</b> E-scooters, EV rentals, delivery bikes, B2B EV fleet systems.</p>
+        `;
+        subList.appendChild(card);
+      });
+    }
+  </script>
 
-    const subList = document.getElementById("sub-list");
-    subList.innerHTML = "";
-
-    productData[voltage].forEach(ah => {
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <img src="https://via.placeholder.com/300x200?text=${voltage}+${ah}" alt="${voltage} ${ah}">
-        <strong>${voltage} ${ah}</strong>
-        <ul>${featuresList.map(f => `<li>${f}</li>`).join('')}</ul>
-      `;
-      subList.appendChild(card);
-    });
-  }
-
-  function goBackToMain() {
-    document.getElementById("sub-products").classList.add("hidden");
-    document.getElementById("main-products").classList.remove("hidden");
-  }
-</script>
 
 <!-- Footer Start -->
 
