@@ -704,7 +704,9 @@
             </div>
         
            
-       </section>    <!-- cycle section end -->
+       </section> 
+          
+          <!-- cycle section end -->
      <!-- about section start -->
       <div class="about_section layout_padding">
          <div class="container">
@@ -737,7 +739,143 @@
                  
                </div>
              </section>
-             
+          <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+   
+    .section-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: #333;
+      position: relative;
+    }
+
+    .section-title h2::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: #161617;
+      display: block;
+      margin: 10px auto 0;
+    }
+
+    .leadership-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .leader-card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .leader-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .leader-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .leader-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .leader-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: lab(3.02% 0 0 / 0.916);
+      margin-bottom: 8px;
+    }
+
+    .leader-role {
+      font-size: 12px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .leader-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section-title">
+    <h2>Leadership Team</h2>
+  </div>
+
+  <div class="leadership-container">
+    <div class="leader-card">
+      <img src="p-elogvan.jpg" alt="Leader 1" class="leader-img">
+      <div class="leader-info">
+        <div class="leader-name">P Elangovan<br>Managing Director </div>
+        <div class="leader-role">Proprietor and Managing Director
+TAP Group of Companies – since 1997.<br>
+College of Engineering Guindy Alumni
+having more than 30 years of experience
+in Design, Manufacturing, Erection &
+Commissioning of Axial & Centrifugal
+fans, HVAC System, Basement/Tunnel
+ventilation, Dust Extraction/Suppression
+System, Firefighting system, etc.</div>
+      </div>
+    </div>
+
+    <div class="leader-card">
+      <img src="krithika-E.jpg" alt="Leader 2" class="leader-img">
+      <div class="leader-info">
+        <div class="leader-name">E Krithika <br>Executive Director</div>
+        <div class="leader-role">Mechanical Engineer and a MBA Graduate,
+started her earlier career as Director -
+Operations in TAP Engineering. With her
+outstanding organizational, communication,
+and leadership skills and ability to develop
+innovative solutions that push boundaries
+she worked closely with executives to
+strategize and develop long-term plans that
+usher in new levels of productivity and
+success for the company</div>
+      </div>
+    </div>
+
+    <div class="leader-card">
+      <img src="abhishek-raaz.jpg" alt="Leader 3" class="leader-img">
+      <div class="leader-info">
+        <div class="leader-name">A.S.ABHISHEK RAAJ <br>Director - Operations</div>
+        <div class="leader-role">Initially carried out various research on
+enhancement of Tribological properties of lubricant
+oils using Nano materials. Started his early career
+as a New Product Development Engineer in the
+automotive field. He has always been fascinated
+with the changing trends in automotive sector and
+to explore more he pursued his Master’s Degree in
+Professional Engineering – Mechanical &
+Management from Australia where his research
+took a shift towards the current EV trend</div>
+      </div>
+    </div>
+  </div>
+
             </body>
 
  <!-- Footer Start -->
